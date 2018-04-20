@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../javascript/button.js"></script>
+  </head>
+  <body>
+      <!--<script>
+          // Warning before leaving the page (back button, or outgoinglink)
+          window.onbeforeunload = function() {
+          return "Do you really want to leave the game ?";
+          //if we return nothing here (just calling return;) then there will be no pop-up question at all
+          //return;
+        };
+    </script>-->
+
+    <div class="flex-container">
+        <p>
+            Scene 1
+        </p>
+        <p>
+            Vers qui veux-tu aller ?
+        </p>
+
+        <form action="javascript:void(0);">
+            <input type="submit" value="Mona" onclick="process(-5,0, &quot;scene2a.html&quot;)"/>
+            <input type="submit" value="Le groupe cool" onclick="process(0,0, &quot;scene2b.html&quot;)"/>
+        </form>
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../javascript/button.js"></script>
+  </head>
+  <body>
+      <script>
+        window.onload = function() {
+            document.getElementById("social_score").innerHTML = localStorage.getItem("social_score")
+            document.getElementById("civil_score").innerHTML = localStorage.getItem("civil_score")
+        }
+      </script>
+
+      <div class="flex-container">
+          <p>
+              The end
+          </p>
+          <p>
+              Social score : <span id="social_score"></span>
+          </p>
+          <p>
+              Civil score : <span id="civil_score"></span>
+          </p>
+      </div>
+
+  </body>
+</html>
