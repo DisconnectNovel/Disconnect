@@ -2,6 +2,8 @@
 function initialize() {
     localStorage.setItem("social_score", 10);
     localStorage.setItem("civil_score", 10);
+    localStorage.setItem("warn_before_leaving_page", "true")
+    localStorage.setItem("current_scene", "scene1")
 }
 
 function process(social_increment, civil_increment, next_page) {
@@ -14,9 +16,6 @@ function process(social_increment, civil_increment, next_page) {
 }
 
 function go_to_page(next_page) {
+    localStorage.setItem("warn_before_leaving_page", "false")
     window.location.href = next_page;
-}
-
-function test(next_page) {
-    alert(localStorage.getItem("pages_visited"))
 }
