@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../javascript/button.js"></script>
+  </head>
+  <body>
+
+      <div class="flex-container">
+          <div id="fading" class="shadow">
+            <img class='opaque' src="../images/test1s.jpg" width="600" height="400"/>
+            <img src="../images/test2s.jpg" width="600" height="400"/>
+            <img src="../images/test3s.jpg" width="600" height="400"/>
+            <img src="../images/test4s.jpg" width="600" height="400"/>
+            <img src="../images/test5s.jpg" width="600" height="400"/>
+          </div>
+
+
+          <div id="forms">
+              <div class="opaque">
+                  <p>Vers qui veux-tu aller ?</p>
+                  <form id="scene1" action="javascript:void(0);">
+                      <input type="submit" value="Mona" onclick="process(-5,0,1)"/>
+                      <input type="submit" value="Le groupe cool" onclick="process(0,0,2)"/>
+                  </form>
+              </div>
+              <div>
+                  <p>Coucou Mona</p>
+                  <form id="scene2a" action="javascript:void(0)">
+                      <input type="submit" value="Continue" onclick="process(0,0,2)"/>
+                  </form>
+              </div>
+              <div>
+                  <p>Coucou le groupe cool</p>
+                  <form id="scene2b" action="javascript:void(0)">
+                      <input type="submit" value="Continue" onclick="process(0,0,1)"/>
+                  </form>
+              </div>
+              <div>
+                  <p>Tu arrives à un passage piéton mais le feu est rouge et tu es en retard. Que fais-tu ?</p>
+                  <form id="scene3" action="javascript:void(0);">
+                      <input type="submit" value="Attendre le feu vert" onclick="process(0,0,1)"/>
+                      <input type="submit" value="Traverser malgré le feu rouge" onclick="process(0,-5,1)"/>
+                  </form>
+              </div>
+              <div>
+                  <p>Social score : <span id="social_score"></span></p>
+                  <p>Civil score : <span id="civil_score"></span></p>
+              </div>
+          </div>
+
+      </div>
+
+  </body>
+</html>
