@@ -25,9 +25,7 @@ input[type="submit"] {
 
 #fading {
   position:relative;
-  height:400px;
-  width:600px;
-  margin:0 auto 10px;
+  /*margin:0 auto 10px;*/
 }
 #fading img {
   position:absolute;
@@ -45,19 +43,26 @@ input[type="submit"] {
   opacity:1;
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=1);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width:100%;
+  height:auto;
 }
 
-#forms {
+#scenes {
   position:relative;
   display: flex;
   align-items: center;
   justify-content: center;
-  height:100px;
-  width:600px;
+  height:300px;
+  width:100%;
   margin:0 auto 10px;
 }
 
-#forms div{
+#scenes>div{
     top:0px;
     position:absolute;
     opacity:0;
@@ -70,7 +75,7 @@ input[type="submit"] {
     filter: alpha(opacity=0);*/
 }
 
-#forms div.opaque{
+#scenes div.opaque{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,8 +85,50 @@ input[type="submit"] {
     filter: alpha(opacity=1);*/
 }
 
-#forms form{
+#scenes form{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#scenes>div>div>p{
+    color: white;
+    opacity: 1;
+    margin: 20px;
+}
+
+#scenes span{
+    color: white;
+    opacity: 1;
+    margin: 20px;
+}
+
+.text_rec{
+    position: fixed;
+    width: 90%;
+    background-color: black;
+    border-radius: 30px;
+    border-style: outset;
+    border-color: #888;
+    border-width:8px;
+    opacity: 0.7;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.choice_item:hover p{
+    color: #f4d742;
+    font-size: 24px;
+    cursor: pointer;
 }
