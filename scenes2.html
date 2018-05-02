@@ -37,16 +37,16 @@
 
                   <div class="text_rec">
                       <p>
-                          C'est le matin, Julien se lève et se prépare pour aller à l'université. En prenant son petit déjeuner, il regarde les nouvelles sur sa tablette. Il remarque une publicité qui propose de stocker son ADN dans une base de donnée médical, en échange d'un petit montant en argent. Que va-t-il faire ?
+                          Une nouvelle journée commence. Le réveil sonne: 7h30. Encore groggy de sommeil, Julien se lève, s'habille péniblement et se traîne dans la cuisine pour préparer son petit déjeuner. Se réveillant petit à petit en regardant des news sur sa tablette, il lit un article vantant les avantages de stocker son ADN dans une base de donnée médicale. "Retrouvez vos origines ancestrales et vos cousins éloignés !", titre l'article. Au bas de celui-ci, une pub offre une réduction de prix importante sur la procédure de stockage, la rendant très abordable. Julien hésite: l'offre est excitante mais semble trop belle pour être vraie.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
                                 onclick="dna_stored = true; process(0,0,&quot;At_the_metro_station&quot;)">
-                                <p>Envoyer son ADN</p>
+                                <p>Saisir l'occasion et envoyer son ADN</p>
                           </span>
                           <span class="choice_item"
                                 onclick="dna_stored = false; process(0,0,&quot;At_the_metro_station&quot;)">
-                                <p>Ne rien faire</p>
+                                <p>Décliner l'offre</p>
                           </span>
                       </div>
                   </div>
@@ -56,7 +56,13 @@
 
                   <div class="text_rec">
                       <p>
-                          Il est temps d'aller aux cours, Julien se dirige vers la station de métro. Arrivé sur place, son identité est controlée par un système de reconnaissance faciale. En continuant à marcher dans la station de métro, il voit différentes publicité sur le big data, le stockage d'ADN, la reconnaissance faciale, etc. Il entre dans le wagon, et voit un homme seul dans un coin, les autres personnes semblent l'éviter. Effectivement le smartphone de Julien lui indique que le personnage à score civil très bas, mieux vaut l'éviter. Le métro tarde à démarrer, une voix au micro parle d'un accident de personne, Julien risque malheureusement de ne pas arriver à l'heure aux cours.
+                          En chemin pour le métro qui l'aménera à l'université, Julien passe devant les nouveaux panneaux de publicité SmartPub® – récemment installés – qui à son approche changent pour afficher différentes pubs montrant les mérites du big data, du stockage d'ADN et la reconnaissance faciale. Aux portes du métro, il voit une femme se faire stopper par un agent qui l'empêche de monter. Celui-ci lui explique que le système l'a reconnue via les caméras et qu'il a signalé que son abonnement associé n'était plus valable. Après toutes ces années, Julien avait presque oublié que le contrôle par système de reconnaissance faciale se faisait en permanence dès l'entrée dans la bouche de métro.
+                          <br/><br/>
+                          Une fois dans le wagon, il reçoit une notification sur son smartphone lui conseillant d'éviter une personne au <b>score social</b> faible (catégorie: peu fréquentable) présente dans ce même wagon. Julien lève les yeux et aperçoit un homme seul dans un coin, entouré d'un cordon invisible que personne ne semble vouloir franchir. "Il a l'air plutôt normal pourtant", pense Julien, "mais on dit que les apparences sont trompeuses".
+                          <br/><br/>
+                          Repensant à la femme sur le quai, il laisse son esprit vagabonder sur les anciennes méthodes de contrôle d'identité qu'il avait apprises en cours d'histoire, entièrement basées sur des agents humains (qu'on disait biaisés). Ses réflexions furent interrompues par une voix lasse, annonçant au micro un retard dû à un accident de personne.
+                          <br/><br/>
+                          Julien espère ne pas être en retard aux cours.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -71,16 +77,16 @@
 
                   <div class="text_rec">
                       <p>
-                          Enfin... après une longue attente et un voyage dans un métro bondé, Julien arrive finalement vers l'université. Il pourrait peut-être arriver tout juste à l'heure, mais il doit encore traverser un passage piéton, et le feu est au rouge. Comme il n'y a pas de voiture, Julien hésite à passer au rouge pour éviter d'être en retard. Que faire ?
+                          Après un long trajet dans un métro bondé et en retard, Julien arrive enfin vers l'université. Il pourrait peut-être encore arriver à l'heure, mais il lui reste à traverser un passage piéton dont le feu vient juste de passer au rouge. Aucune voiture n'étant en vue, Julien hésite:
                       </p>
                       <div class="choice">
                           <span class="choice_item"
                                 onclick="process(0,-1,&quot;At_school&quot;)">
-                                <p>Passer au rouge</p>
+                                <p>Passer au rouge et arriver juste à l'heure</p>
                           </span>
                           <span class="choice_item"
                                 onclick="process(-1,0,&quot;At_school&quot;)">
-                                <p>Attendre le feu vert</p>
+                                <p>Attendre le feu vert et arriver assurément en retard</p>
                           </span>
                       </div>
                   </div>
@@ -90,7 +96,7 @@
 
                   <div class="text_rec">
                       <p>
-                          Julien suit le premier cours du matin. Arrivé à la pause, il décide d'aller un peu dehors. Dans la cour il peut voir sur sa gauche une fille seule sur un banc. Elle s'appelle Mona, et Julien a entendu dire que ses parents avaient une mauvaise réputation, et son score social a fortement diminué en conséquence. Julien hésite à venir lui parler, finalement si son score est en grande partie dû aux actions de ses parents, ce n'est pas vraiment de sa faute. En même temps, il y a un groupe d'étudiants vraiment sympa un peu plus loin, avec une très bonne réputation, et Julien a assez envie de passer du temps avec eux.
+                          Julien suit le premier cours du matin. Arrivé à la pause, il décide d'aller un peu dehors. Dans la cour il aperçoit à sa gauche une fille seule, assise sur un banc. Il sait qu'elle s'appelle Mona et que la mauvaise réputation de ses parents affecte fortement la sienne, la laissant sans ami car personne n'ose l'approcher. Julien hésite aller lui parler, se disant que ce n'est pas vraiment de sa faute si son <b>score social</b> est dû aux actions de ses parents. D'un autre côté, il y a un peu plus loin un groupe d'étudiants à la réputation exemplaire qui semblent bien s'amuser. Julien se dit qu'en plus ça devrait monter son propre <b>score social</b>.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
