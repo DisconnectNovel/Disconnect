@@ -47,6 +47,8 @@ function resizeImage() {
     let width_body = $("body").width()
 
     if (width_image/height_image > width_body/height_body) {
+        $("img").css("width", "100%")
+        $("img").css("height", "auto")
         $("img.opaque").css("width", "100%")
         $("img.opaque").css("height", "auto")
         $("fading").css("width", "100%")
@@ -55,11 +57,15 @@ function resizeImage() {
         $("img.opaque").css("left", "0")
         let top = parseInt(height_body - height_image)/2
         $("img.opaque").css("top", top)
+        $("img").css("left", "0")
+        $("img").css("top", top)
 
         let height_text = $("#"+current_scene + " .text_rec").height()
         $("#"+current_scene + " .text_rec").css("top", top+height_image - height_text - 40)
     }
     else {
+        $("img").css("width", "auto")
+        $("img").css("height", "100%")
         $("img.opaque").css("width", "auto")
         $("img.opaque").css("height", "100%")
         $("fading").css("width", "auto")
@@ -68,6 +74,8 @@ function resizeImage() {
         $("img.opaque").css("top", "0")
         let left = parseInt(width_body - width_image)/2
         $("img.opaque").css("left", left)
+        $("img").css("top", "0")
+        $("img").css("left", left)
 
         let height_text = $("#"+current_scene + " .text_rec").height()
         $("#"+current_scene + " .text_rec").css("top", height_body - height_text - 40)
@@ -94,15 +102,19 @@ function process(social_increment, civil_increment, next_scene) {
     $("#scenes div").removeClass("opaque");
     $("#"+next_scene).addClass("opaque");
 
-    /*let element = document.getElementById("#"+next_scene);
-    let positionInfo = element.getBoundingClientRect();
-    let height = positionInfo.height;
-    let width = positionInfo.width;*/
     let height_text = $("#"+next_scene + " .text_rec p").height()
     let height_choice = $("#"+next_scene + " .choice span").height()
     let height_total = height_text + height_choice
     $("#"+next_scene + " .text_rec").css("height", height_total)
-    resizeImage()
+
+    if ($("#"+current_scene + "_img").position() == undefined) {
+        $("#"+current_scene + " .text_rec").css("top", parseInt($("body").height()/2 - height_total/2))
+    }
+    else {
+        let top_img = parseInt($("#"+current_scene + "_img").position().top)
+        let height_img = parseInt($("#"+current_scene + "_img").height())
+        $("#"+current_scene + " .text_rec").css("top", top_img + height_img - height_total - 40)
+    }
 }
 
 function updateText_d2_At_school() {
