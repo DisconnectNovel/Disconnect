@@ -107,16 +107,16 @@ function process(social_increment, civil_increment, next_scene) {
 
 function updateText_d2_At_school() {
     if (talked_to_Mona) {
-        document.getElementById("d2_At_school_text").innerHTML = "Le lendemain, Julien retourne à l'université. Il croise Mona dans la cours et la salue, il s'arrête un moment pour discuter avec elle. Ensuite, il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
+        document.getElementById("d2_At_school_text").innerHTML = "Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour et la salue, il s'arrête un moment pour discuter avec elle. Ensuite, il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
     }
     else {
-        document.getElementById("d2_At_school_text").innerHTML = "Le lendemain, Julien retourne à l'université. Il croise Mona dans la cours, mais préfère l'ignorer comme la dernière fois. Il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
+        document.getElementById("d2_At_school_text").innerHTML = "Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour, mais préfère l'ignorer comme la dernière fois. Il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
     }
 }
 
 function updateText_d2_At_health_insurance() {
     let text = ""
-    text += "Après les cours, Julien se rend dans une compagnie d'assurance de contracter une assurance santé, mais on lui refuse l'assurance pour les raisons suivantes :<br /><br />"
+    text += "Après les cours, Julien se rend dans une compagnie d'assurance pour contracter une assurance santé, mais on lui refuse l'assurance pour les raisons suivantes :<br /><br />"
 
     if (dna_stored) {
         text += "  - L'ADN que Julien avait envoyé précédemment indique des probabilités de maladie supérieures à la moyenne.<br />"
@@ -136,7 +136,7 @@ function updateText_d2_At_health_insurance() {
         text += "  - Les données récoltées à partir de l'application que Julien avait utilisé pour aller courir indiquent que ses performances sont assez faibles. Le rythme cardiaque était également particulièrement élevé lors de la course, indicateur de mauvaise santé physique.<br />"
     }
     else {
-        text += "  - Les données récoltées à partir du GPS du téléphone de Julien indiquent qu'il se déplace peu, et donc fait qu'il fait très peu de sport.<br />"
+        text += "  - Les données récoltées à partir du GPS du téléphone de Julien indiquent qu'il se déplace peu, et donc qu'il fait très peu de sport.<br />"
     }
 
     text += "<br />L'assureur dit à Julien que si il souhaite vraiment obtenir une assurance santé, alors le prix sera nettement plus élevé à cause des facteurs de risque. Julien est révolté, il n'est pas capable de payer une telle somme. Il s'énerve sur le vendeur en criant que c'est complètement stupide puisqu'il veut se faire assurer justement pour faire du basket, ce qui serait certainement bon pour sa santé. La colère de Julien est enregistrée par une caméra de surveillance qui se trouve à l'intérieur de la pièce."
@@ -144,12 +144,12 @@ function updateText_d2_At_health_insurance() {
 }
 
 function updateText_d2_Way_back_home() {
-    let text = "Julien finit par sortir du bâtiment de la compagnie d'assurance. Il n'a pas se faire assurer et espère qu'il y aura une possibilité de jouer au basket malgré tout. Il se dirige vers la station de métro pour rentrer chez lui. "
+    let text = "Julien finit par sortir du bâtiment de la compagnie d'assurance. Il n'a pas pu se faire assurer et espère qu'il y aura une possibilité de jouer au basket malgré tout. Il se dirige vers la station de métro pour rentrer chez lui. "
     if (civil_score < 2) {
         text+= "Malheureusement, son score civil est trop bas, et lors du contrôle par reconnaissance faciale, le système lui interdit l'accès au métro. Les écarts de conduite de Julien, comme le fait de traverser un passage piéton alors que le feu est rouge, ou encore de s'être énerver contre l'agent de la compagnie d'assurance, a certainement dû contribuer à ce mauvais score. Décidément, c'est une très mauvaise journée pour Julien qui est alors forcé de rentrer chez lui à pied."
     }
     else {
-        text+= "Il se fait contrôler par le système de reconnaissance facial, mais avant de pouvoir passer, le système avertit Julien que son score civil est très bas, et que si il continue à descendre, l'accès aux systèmes de transport en commun lui sera refusé. Julien se dit que c'est peut-être entre autres dû au fait qu'il a traversé un passage piéton alors que le feu était au rouge."
+        text+= "Il se fait contrôler par le système de reconnaissance faciale, mais avant de pouvoir passer, le système avertit Julien que son score civil est très bas, et que si il continue à descendre, l'accès aux systèmes de transport en commun lui sera refusé. Julien se dit que c'est peut-être dû au fait qu'il a traversé un passage piéton alors que le feu était au rouge."
     }
     document.getElementById("d2_Way_back_home_text").innerHTML = text
 }
