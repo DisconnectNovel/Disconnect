@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascript/button.js"></script>
+  </head>
+  <body>
+      <script>
+        window.onload = function() {
+            current_scene = "At_the_studio"
+            $("#fading img").removeClass("opaque");
+            $("#scenes div").removeClass("opaque");
+            $("#" + current_scene).addClass("opaque");
+            $("#" + current_scene + "_img").addClass("opaque");
+            let height_text = $("#"+current_scene + " .text_rec p").height()
+            let height_choice = $("#"+current_scene + " .choice span").height()
+            let height_total = height_text + height_choice
+            $("#"+current_scene + " .text_rec").css("height", height_total)
+            resizeImage()
+        }
+      </script>
+
+      <div class="flex-container">
+          <div id="fading" class="shadow">
+            <img id="At_the_studio_img" src="images/At_the_studio.jpg" width="600" height="400"/>
+            <img id="At_the_metro_station_img" src="images/At_the_metro_station.jpg" width="600" height="400"/>
+            <img id="In_the_streets_img" src="images/In_the_streets.jpg" width="600" height="400"/>
+            <img id="At_school_img" src="images/At_school.jpg" width="600" height="400"/>
+          </div>
+
+
+          <div id="scenes">
+
+              <div id="At_the_studio">
+
+                  <div class="text_rec">
+                      <p>
+                          Une nouvelle journée commence. Le réveil sonne: 7h30. Encore groggy de sommeil, Julien se lève, s'habille péniblement et se traîne dans la cuisine pour préparer son petit déjeuner. Se réveillant petit à petit en regardant des news sur sa tablette, il lit un article vantant les avantages de stocker son ADN dans une base de donnée médicale. "Retrouvez vos origines ancestrales et vos cousins éloignés !", titre l'article. Au bas de celui-ci, une pub offre une réduction de prix importante sur la procédure de stockage, la rendant très abordable. Julien hésite: l'offre est excitante mais semble trop belle pour être vraie.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="dna_stored = true; process(0,0,&quot;At_the_metro_station&quot;)">
+                                <p>Saisir l'occasion et envoyer son ADN</p>
+                          </span>
+                          <span class="choice_item"
+                                onclick="dna_stored = false; process(0,0,&quot;At_the_metro_station&quot;)">
+                                <p>Décliner l'offre</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="At_the_metro_station">
+
+                  <div class="text_rec">
+                      <p>
+                          En chemin pour le métro qui l'aménera à l'université, Julien passe devant les nouveaux panneaux de publicité SmartPub® – récemment installés – qui à son approche changent pour afficher différentes pubs montrant les mérites du big data, du stockage d'ADN et la reconnaissance faciale. Aux portes du métro, il voit une femme se faire stopper par un agent qui l'empêche de monter. Celui-ci lui explique que le système l'a reconnue via les caméras et qu'il a signalé que son abonnement associé n'était plus valable. Après toutes ces années, Julien avait presque oublié que le contrôle par système de reconnaissance faciale se faisait en permanence dès l'entrée dans la bouche de métro.
+                          <br/><br/>
+                          Une fois dans le wagon, il reçoit une notification sur son smartphone lui conseillant d'éviter une personne au <b>score social</b> faible (catégorie: peu fréquentable) présente dans ce même wagon. Julien lève les yeux et aperçoit un homme seul dans un coin, entouré d'un cordon invisible que personne ne semble vouloir franchir. "Il a l'air plutôt normal pourtant", pense Julien, "mais on dit que les apparences sont trompeuses".
+                          <br/><br/>
+                          Repensant à la femme sur le quai, il laisse son esprit vagabonder sur les anciennes méthodes de contrôle d'identité qu'il avait apprises en cours d'histoire, entièrement basées sur des agents humains (qu'on disait biaisés). Ses réflexions furent interrompues par une voix lasse, annonçant au micro un retard dû à un accident de personne.
+                          <br/><br/>
+                          Julien espère ne pas être en retard aux cours.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;In_the_streets&quot;)">
+                              <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="In_the_streets">
+
+                  <div class="text_rec">
+                      <p>
+                          Après un long trajet dans un métro bondé et en retard, Julien arrive enfin vers l'université. Il pourrait peut-être encore arriver à l'heure, mais il lui reste à traverser un passage piéton dont le feu vient juste de passer au rouge. Aucune voiture n'étant en vue, Julien hésite:
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,-1,&quot;At_school&quot;)">
+                                <p>Passer au rouge et arriver juste à l'heure</p>
+                          </span>
+                          <span class="choice_item"
+                                onclick="process(-1,0,&quot;At_school&quot;)">
+                                <p>Attendre le feu vert et arriver assurément en retard</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="At_school">
+
+                  <div class="text_rec">
+                      <p>
+                          Julien suit le premier cours du matin. Arrivé à la pause, il décide d'aller un peu dehors. Dans la cour il aperçoit à sa gauche une fille seule, assise sur un banc. Il sait qu'elle s'appelle Mona et que la mauvaise réputation de ses parents affecte fortement la sienne, la laissant sans ami car personne n'ose l'approcher. Julien hésite aller lui parler, se disant que ce n'est pas vraiment de sa faute si son <b>score social</b> est dû aux actions de ses parents. D'un autre côté, il y a un peu plus loin un groupe d'étudiants à la réputation exemplaire qui semblent bien s'amuser. Julien se dit qu'en plus ça devrait monter son propre <b>score social</b>.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="talked_to_Mona=true;process(-1,0,&quot;At_the_supermarket&quot;)">
+                                <p>Aller discuter avec Mona</p>
+                          </span>
+                          <span class="choice_item"
+                                onclick="process(1,0,&quot;At_the_supermarket&quot;)">
+                                <p>Rejoindre le groupe d'étudiants</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="At_the_supermarket">
+
+                  <div class="text_rec">
+                      <p>
+                          Après avoir terminé sa journée de cours, Julien rentre chez lui. Sur le chemin il décide de passer au supermarché pour acheter quelques trucs. Comme la journée a été longue, il n'a pas envie de cuisiner et décide d'acheter des pizzas surgelées. Il achète également quelques bières et des biscuits. En passant à la caisse, il paie directement par reconnaissance faciale, c'est quand même plus simple de cette manière. On lui propose de s'enregistrer en tant que client du supermarché afin d'obtenir une carte de fidélité qui lui permettra de bénéficier d'une réduction sur ses futurs achats.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="fidelity_card=true;process(0,0,&quot;Back_home&quot;)">
+                                <p>Obtenir la carte</p>
+                          </span>
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;Back_home&quot;)">
+                                <p>Rejeter la proposition</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="Back_home">
+
+                  <div class="text_rec">
+                      <p>
+                          En rentrant à la maison, Julien a un peu de temps libre. Il se dit qu'il devrait aller courir un peu, ça fait lontemps qu'il se dit ça, c'est l'occasion. D'un autre coté il y a un film assez intéressant qui va passer à la télévision.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="ran=true;process(0,0,&quot;Back_home2&quot;)">
+                                <p>Aller courir</p>
+                          </span>
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;Back_home2&quot;)">
+                                <p>Regarder le film</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="Back_home2">
+
+                  <div class="text_rec">
+                      <p>
+                          Il est tard, Julien se prépare pour aller dormir. Il passe encore un moment sur son téléphone à jouer à des jeux de stratégies et de réflexion. Il va également traîner un peu sur les réseaux sociaux.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="updateText_d2_At_school();process(0,0,&quot;d2_At_school&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Day 2 -->
+
+              <div id="d2_At_school">
+
+                  <div class="text_rec">
+                      <p id="d2_At_school_text"></p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="updateText_d2_At_health_insurance();process(0,0,&quot;d2_At_health_insurance&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_At_health_insurance">
+
+                  <div class="text_rec">
+                      <p id="d2_At_health_insurance_text"></p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="updateText_d2_Way_back_home();process(0,-1,&quot;d2_Way_back_home&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_Way_back_home">
+
+                  <div class="text_rec">
+                      <p id="d2_Way_back_home_text"></p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;d2_Way_back_home_Mona&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_Way_back_home_Mona">
+
+                  <div class="text_rec">
+                      <p>
+                          Juste avant d'arriver chez lui, Julien croise Mona assise sur un banc, en train de pleurer. Julien est toujours énervé et n'est pas trop d'humeur à discuter, mais comme elle a l'air vraiment triste, il hésite à s'arrêter un moment pour lui demander ce qu'il se passe.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="stopped_when_Mona_sad=true;process(-1,0,&quot;d2_Mona&quot;)">
+                                <p>S'arrêter vers Mona</p>
+                          </span>
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;d2_Ignoring_Mona&quot;)">
+                                <p>Ignorer Mona</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_Mona">
+
+                  <div class="text_rec">
+                      <p>
+                          Julien s'arrête vers Mona et lui demande ce qui ne va pas. Elle lui répond qu'elle ne sait plus quoi faire, que son score civil et social sont particulièrement bas, et qu'elle n'arrive pas à les remonter. Elle se sent prise au piège, comme ses scores sont bas, les personnes avec de bons scores l'évitent, et si elle reste avec des personnes dont le score est bas, son score diminue. Soit elle doit rester seul en espérant pouvoir remonter son score à l'avenir, soit elle est condamnée à vivre avec tous les désavantages liés à un faible score. Julien lui dit qu'il la comprend tout à fait, et lui explique les problèmes qu'il a eu durant la journée à cause de ça. Il lui propose d'aller boire un verre avec lui le lendemain.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="updateText_d2_At_home();process(0,0,&quot;d2_At_home&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_Ignoring_Mona">
+
+                  <div class="text_rec">
+                      <p>
+                          Julien passe tout droit, avec tout ce qui lui est arrivé, il n'est pas vraiment d'humeur à écouter les problèmes des autres. Il rentre chez lui.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="updateText_d2_At_home();process(0,0,&quot;d2_At_home&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_At_home">
+
+                  <div class="text_rec">
+                      <p id="d2_At_home_text"></p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;d3_At_school&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Day 3 -->
+
+              <div id="d3_At_school">
+
+                  <div class="text_rec">
+                      <p>
+                          Le jour suivant, Julien se rend à l'université, et ses amis lui reprochent de ne pas faire de basket avec eux. Julien leur rétorque que ce n'est pas de sa faute, mais cela n'a pas l'air de vraiment les intéresser, ils retournent rapidement à leur jeu, et Julien se retrouve seul. Plus tard, il est appelé dans le bureau du directeur.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;d3_Director&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d3_Director">
+
+                  <div class="text_rec">
+                      <p>
+                          Le directeur lui explique que Julien est considéré comme en échec et va devoir refaire son année. Julien est abasourdi par cette nouvelle, ses notes ne sont effectivement pas excellentes, mais elles sont suffisantes pour lui faire passer son année. Le directeur lui explique que ce n'est pas seulement une question de notes. L'évaluation des étudiants est plus large et tient compte également d'autres éléments, comme l'activité en ligne des étudiants sur des jeux de réflexion et de stratégie. Comme Julien n'est pas très bon à ces jeux, cela a contribuer à descendre sa moyenne. Julien se met alors en colère, et commence à crier sur le directeur. Une fois encore, une caméra de surveillance filme toute la scène.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="if(stopped_when_Mona_sad){process(0,0,&quot;d3_Back_home_Mona&quot;)}else{process(0,0,&quot;d3_Back_home_no_Mona&quot;)}">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d3_Back_home_Mona">
+                  <div class="text_rec">
+                      <p>
+                          Julien retourne chez lui, il reçoit un message d'un ami qui organise une fête le soir-même. Julien est très tenté par cette soirée, ne serait-ce que pour remonter son score social qui commence à être dangereusement bas. Mais en même temps il a déjà prévu d'aller boire un verre avec Mona. Impossible de faire les deux, Mona ne sera jamais invitée à la soirée. Il doit choisir.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;rebellions_ending_1&quot;)">
+                                <p>Aller voir Mona comme prévu</p>
+                          </span>
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;conformisms_ending&quot;)">
+                                <p>Aller à la fête de son ami</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d3_Back_home_no_Mona">
+
+                  <div class="text_rec">
+                      <p>
+                          Julien retourne chez lui, il reçoit un message d'un ami qui organise une fête le soir-même. Comme Julien n'a rien prévu durant la soirée, il accepte l'invitation. Cela sera une bonne occasion d'augmenter son score social. Il en profite pour poster sur les réseaux sociaux qu'il va venir à la soirée.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;conformisms_ending&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <!-- Rebellion -->
+
+              <div id="rebellions_ending_1">
+
+                  <div class="text_rec">
+                      <p>
+                          Julien passe une super soirée avec Mona. Tout se passe parfaitement bien, et il commence à tomber amoureux d'elle.<br /> <br />
+                          Les jours suivants, ils continuent de se voir et finissent pas sortir ensemble, Julien ne pense plus trop à ses problèmes de scores, il est heureux avec elle.<br /> <br />
+                          Un jour, alors qu'ils se promènent en ville, ils tombent sur un groupe dont la réputation sociale est élevée. Ils se montrent particulièrement méprisant envers Mona en la pointant du doigt et en disant à Julien "C'est pour ÇA que tu ne viens pas à nos fêtes !". Julien préfère les ignorer, il a déjà eu assez de problème à cause de ses accès de colère. Il tente par la suite de réconforter Mona qui a très mal pris la remarque qui lui a été lancée. <br /> <br />
+                          Quelques jours plus tard, alors que Julien rentre tranquillement des cours, il reçoit un message de Mona. Le message indique simplement "Je suis désolée...". Il ne comprend pas du tout le sens du message et l'appelle immédiatement, sans succès. Julien imagine le pire et décide de se rendre immédiatement à son appartement. Arrivé sur place, il entre dans l'appartement grâce au double des clés que Mona lui a donné, et la trouve allongé sur son lit, le regard figé, deux boîtes de médicaments vides traînant au pied du lit. Il se précipite vers elle pour tenter de la réveiller, voyant qu'il n'y arrive pas, il appelle une ambulance. <br /> <br />
+                          En attendant l'ambulance, Julien vérifie le poul de Mona. Il est très faible, mais il arrive à le détecter. Malheureusement, l'ambulance tarde à arriver. Paniqué, Julien rappelle alors les urgences pour leur demander pourquoi cela met si long ! Une personne lui répond qu'une ambulance vient seulement de partir à l'instant. Toutes les ambulances se sont d'abord occupée de personnes dont le score social était plus élevé. <br /> <br />
+                          Lorsque l'ambulance arrive enfin, il est trop tard. Le coeur de Mona s'est arrêté, et les ambulanciers ne parviennent pas à la réanimer. Impuissant, Julien regarde les ambulanciers mettre Mona sur une civière, la recouvrant d'un drap blanc, avant de l'emmener dans l'ambulance.
+                      </p>
+
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;rebellions_ending_2&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="rebellions_ending_2">
+
+                  <div class="text_rec">
+                      <p>
+                          Julien est dévasté, la perte de Mona l'a complètement détruit. Les jours suivant, il n'arrive plus à penser à autre chose, et envisage sérieusement de mettre lui aussi fin à ses jours.
+                          <br /> <br />
+                          Alors qu'il marche dans la rue. Un homme à l'allure étrange lui fait signe et lui demande de venir vers lui. Julien est surpris et se demande pourquoi il ne vient pas lui-même. L'homme insiste, et Julien s'approche de lui. Il comprend ensuite que l'homme voulait éviter de lui parler à la vue des caméras de sécurité de la ville.
+                          <br /> <br />
+                          L'homme explique à Julien qu'il est un ami de Mona, et qu'il fait partie d'un groupe d'activistes visant à démanteler le système actuel de score, jugé trop répressif et discriminatoire. Il propose à Julien de rejoindre ce groupe, lui expliquant que ça fait déjà un certain temps que son groupe l'observe. Julien ne sait pas trop quoi lui répondre. L'homme lui tend alors un téléphone. Il explique à Julien qu'il s'agit d'un téléphone crypté, impossible à tracer, et utilisé uniquement pour pouvoir se contacter au sein du groupe activiste. L'homme lui dit qu'il le recontactera bientôt.
+                      </p>
+
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;rebellions_ending_3&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="rebellions_ending_3">
+                  <p>Image finale pour la fin 'rebellion'</p>
+              </div>
+
+              <!-- Conformism -->
+
+              <div id="conformisms_ending">
+
+                  <div class="text_rec">
+                      <p>
+                          L'ami qui organise la fête demande à Julien d'aller acheter de l'alcool avant de venir. Julien passe donc au supermarché et achète une bonne quantité d'alcool pour la soirée. Il se rend ensuite à la fête.
+                          <br /> <br />
+                          La fête est vraiment cool et Julien s'amuse bien avec ses autres amis. C'est alors que la police arrive et effectue un contrôle. Le système de surveillance de la ville a en effet trouvé suspect la grande quantité d'alcool achetée par Julien, un citoyen de faible réputation. Les policiers remarquent que l'alcool est mis à disposition librement alors qu'il y a des mineurs à la fête. Ils confisquent l'alcool et mettent un terme à la soirée.
+                          <br /> <br />
+                          Le lendemain, Julien contacte ses amis, mais remarque très vite que ceux-ci le rejette à cause de ce qu'il s'est passé la veille, considérant que c'est de sa faute. Julien n'arrive pas à leur faire entendre raison. Il se demande même si le fait qu'on lui ait demandé d'acheter de l'alcool n'était pas en quelque sorte un piège : ses soi-disant amis, sachant qu'ils y auraient des mineurs à la soirée, ont préféré lui demandé à lui d'acheter de l'alcool au cas où il y aurait un problème.
+                      </p>
+
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;conformisms_ending_2&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+
+              </div>
+
+              <div id="conformisms_ending_2">
+                  <p>Image finale pour la fin 'conformisme'</p>
+              </div>
+
+
+
+
+              <div>
+                  <p>Social score : <span id="social_score"></span></p>
+                  <p>Civil score : <span id="civil_score"></span></p>
+              </div>
+          </div>
+
+      </div>
+
+  </body>
+</html>
