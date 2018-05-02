@@ -9,6 +9,25 @@ input[type="submit"] {
     font-size: 24px;
 }
 
+.start_text p{
+    position: fixed;
+    left: 60%;
+    top: 70%;
+    font-size: 36px;
+    color: #EEE;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.start_text p:hover{
+    position: fixed;
+    left: 60%;
+    top: 70%;
+    transform: translateY(-8px) translateX(-8px);
+    font-size: 42px;
+    color: #f4d742;
+    cursor: pointer;
+}
+
 .flex-container {
   height:100%;
   padding: 0;
