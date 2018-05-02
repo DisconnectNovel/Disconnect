@@ -41,8 +41,8 @@ window.onresize = function(event) {
 
 function resizeImage() {
     /* Attention, consider that all images have same size*/
-    let height_image = 400//$("#fading img").height()
-    let width_image = 600//$("#fading img").width()
+    let height_image = 720//$("#fading img").height()
+    let width_image = 1280//$("#fading img").width()
     let height_body = $("body").height()
     let width_body = $("body").width()
 
