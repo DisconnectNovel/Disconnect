@@ -15,3 +15,145 @@ body {
   width:100%;
   margin:0 auto 10px;
 }
+
+/* Text Box */
+
+
+
+.start_text p{
+    position: fixed;
+    left: 60%;
+    top: 70%;
+    font-size: 36px;
+    color: #EEE;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.start_text p:hover{
+    position: fixed;
+    left: 60%;
+    top: 70%;
+    transform: translateY(-8px) translateX(-8px);
+    font-size: 42px;
+    color: #f4d742;
+    cursor: pointer;
+}
+
+.flex-container {
+  height:100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+    margin: 20px;
+}
+
+
+
+#scenes>div{
+    top:0px;
+    position:absolute;
+    opacity:0;
+    display: none;
+/*    -webkit-transition: opacity 2s ease-in-out;
+    -moz-transition: opacity 2s ease-in-out;
+    -o-transition: opacity 2s ease-in-out;
+    transition: opacity 2s ease-in-out;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);*/
+}
+
+#scenes div.opaque{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity:1;
+    /*-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);*/
+}
+
+#scenes form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#scenes>div>div>p{
+    color: white;
+    opacity: 1;
+    margin: 20px;
+}
+
+#scenes span{
+    color: white;
+    opacity: 1;
+    margin: 20px;
+}
+
+.text_rec{
+    position: fixed;
+    width: 90%;
+    background-color: black;
+    border-radius: 30px;
+    border-style: outset;
+    border-color: #888;
+    border-width:8px;
+    opacity: 0.7;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.choice{
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.choice_item:hover p{
+    color: #f4d742;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* Images */
+
+#fading {
+  position:relative;
+  /*margin:0 auto 10px;*/
+}
+#fading img {
+  position: fixed;
+  -webkit-transition: opacity 2s ease-in-out;
+  -moz-transition: opacity 2s ease-in-out;
+  -o-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  opacity:0;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+}
+
+#fading img.opaque {
+  opacity:1;
+  -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=1);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width:100%;
+  height:auto;
+}
