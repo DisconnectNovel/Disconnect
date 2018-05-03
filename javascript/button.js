@@ -1,3 +1,4 @@
+var FULL_SCREEN_IMG = true
 
 var social_score = 4
 var civil_score = 3
@@ -46,7 +47,17 @@ function resizeImage() {
     let height_body = $("body").height()
     let width_body = $("body").width()
 
-    if (width_image/height_image > width_body/height_body) {
+    if (FULL_SCREEN_IMG) {
+        $("img").css("height", "100%")
+        $("fading").css("height", "100%")
+        $("img").css("top", "0")
+        let left = parseInt(-(width_image - width_body)/2)
+        $("img").css("left", "0")
+        let height_text = $("#"+current_scene + " .text_rec").height()
+        $("#"+current_scene + " .text_rec").css("top", height_body - height_text - 40)
+        $("img").css("object-fit","cover")
+    }
+    else if (width_image/height_image > width_body/height_body) {
         $("img").css("width", "100%")
         $("img").css("height", "auto")
         $("img.opaque").css("width", "100%")
