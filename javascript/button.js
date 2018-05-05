@@ -149,15 +149,16 @@ function process(social_increment, civil_increment, next_scene) {
 
 function updateText_d2_At_school() {
     if (talked_to_Mona) {
-        document.getElementById("d2_At_school_text").innerHTML = "Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour et la salue, il s'arrête un moment pour discuter avec elle. Ensuite, il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
+        document.getElementById("d2_At_school_text").innerHTML = "<b>TODO JS</b><br/><br/>Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour et la salue, il s'arrête un moment pour discuter avec elle. Ensuite, il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
     }
     else {
-        document.getElementById("d2_At_school_text").innerHTML = "Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour, mais préfère l'ignorer comme la dernière fois. Il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
+        document.getElementById("d2_At_school_text").innerHTML = "<b>TODO JS</b><br/><br/>Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour, mais préfère l'ignorer comme la dernière fois. Il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
     }
 }
 
 function updateText_d2_At_health_insurance() {
-    let text = ""
+
+    let text = "<b>TODO in JS</b><br/><br/>"
     text += "Après les cours, Julien se rend dans une compagnie d'assurance pour contracter une assurance santé, mais on lui refuse l'assurance pour les raisons suivantes :<br /><br />"
 
     if (dna_stored) {
@@ -186,7 +187,7 @@ function updateText_d2_At_health_insurance() {
 }
 
 function updateText_d2_Way_back_home() {
-    let text = "Julien finit par sortir du bâtiment de la compagnie d'assurance. Il n'a pas pu se faire assurer et espère qu'il y aura une possibilité de jouer au basket malgré tout. Il se dirige vers la station de métro pour rentrer chez lui. "
+    let text = "<b>TODO JS</b><br/><br/>Julien finit par sortir du bâtiment de la compagnie d'assurance. Il n'a pas pu se faire assurer et espère qu'il y aura une possibilité de jouer au basket malgré tout. Il se dirige vers la station de métro pour rentrer chez lui. "
     if (civil_score < 2) {
         text+= "Malheureusement, son score civil est trop bas, et lors du contrôle par reconnaissance faciale, le système lui interdit l'accès au métro. Les écarts de conduite de Julien, comme le fait de traverser un passage piéton alors que le feu est rouge, ou encore de s'être énerver contre l'agent de la compagnie d'assurance, a certainement dû contribuer à ce mauvais score. Décidément, c'est une très mauvaise journée pour Julien qui est alors forcé de rentrer chez lui à pied."
     }
@@ -197,7 +198,7 @@ function updateText_d2_Way_back_home() {
 }
 
 function updateText_d2_At_home() {
-    let text = "Le soir, comme à son habitude, Julien joue à des jeux de réflexion sur son smartphone. "
+    let text = "<b>TODO JS</b><br/><br/> Le soir, comme à son habitude, Julien joue à des jeux de réflexion sur son smartphone. "
     if (stopped_when_Mona_sad) {
         text+= "Il reçoit alors un message d'un ami de l'université qui l'a vu avec Mona et qui lui demande pourquoi il perd son temps avec une fille comme ça. Julien est assez surpris, pour lui ça n'a aucune importance de savoir avec qui il parle."
     }
