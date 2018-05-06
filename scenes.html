@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/textBox.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/button.js"></script>
+    <script type="text/javascript" src="javascript/warning.js"></script>
   </head>
   <body>
       <script>
@@ -35,7 +36,7 @@
 
           <div id="scenes">
 
-              <div id="At_the_studio">
+              <div id="At_the_studio" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -54,7 +55,7 @@
                   </div>
               </div>
 
-              <div id="At_the_metro_station">
+              <div id="At_the_metro_station" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -73,7 +74,7 @@
                   </div>
               </div>
 
-              <div id="In_the_streets">
+              <div id="In_the_streets" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -81,18 +82,18 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,-1,&quot;At_school&quot;)">
+                                onclick="activateWarning('Le GPS indique une infraction','Votre score civil diminue');process(0,-1,&quot;At_school&quot;)">
                                 <p>Passer au rouge et arriver juste à l'heure</p>
                           </span>
                           <span class="choice_item"
-                                onclick="process(-1,0,&quot;At_school&quot;)">
+                                onclick="activateWarning('Vous êtes arrivé en retard','Votre score social diminue');process(-1,0,&quot;At_school&quot;)">
                                 <p>Attendre le feu vert et arriver assurément en retard</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="At_school">
+              <div id="At_school" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -100,18 +101,20 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="talked_to_Mona=true;process(-1,0,&quot;At_the_supermarket&quot;)">
+                                onclick="activateWarning('Mauvaise fréquentation','Votre score social diminue');
+                                talked_to_Mona=true;
+                                process(-1,0,&quot;At_the_supermarket&quot;)">
                                 <p>Aller discuter avec Mona</p>
                           </span>
                           <span class="choice_item"
-                                onclick="process(1,0,&quot;At_the_supermarket&quot;)">
+                                onclick="activateWarning('Bonne fréquentation','Votre score social augmente', 'good');process(1,0,&quot;At_the_supermarket&quot;)">
                                 <p>Rejoindre le groupe d'étudiants</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="At_the_supermarket">
+              <div id="At_the_supermarket" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -130,7 +133,7 @@
                   </div>
               </div>
 
-              <div id="Back_home">
+              <div id="Back_home" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -149,7 +152,7 @@
                   </div>
               </div>
 
-              <div id="Back_home2">
+              <div id="Back_home2" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -166,7 +169,7 @@
 
               <!-- Day 2 -->
 
-              <div id="d2_At_school">
+              <div id="d2_At_school" class="scene">
 
                   <div class="text_rec">
                       <p id="d2_At_school_text"></p>
@@ -179,20 +182,21 @@
                   </div>
               </div>
 
-              <div id="d2_At_health_insurance">
+              <div id="d2_At_health_insurance" class="scene">
 
                   <div class="text_rec">
                       <p id="d2_At_health_insurance_text"></p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="updateText_d2_Way_back_home();process(0,-1,&quot;d2_Way_back_home&quot;)">
+                                onclick="activateWarning('CCTV : Comportement violent détecté','Votre score civil diminue');
+                                updateText_d2_Way_back_home();process(0,-1,&quot;d2_Way_back_home&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_Way_back_home">
+              <div id="d2_Way_back_home" class="scene">
 
                   <div class="text_rec">
                       <p id="d2_Way_back_home_text"></p>
@@ -205,7 +209,7 @@
                   </div>
               </div>
 
-              <div id="d2_Way_back_home_Mona">
+              <div id="d2_Way_back_home_Mona" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -213,7 +217,9 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="stopped_when_Mona_sad=true;process(-1,0,&quot;d2_Mona&quot;)">
+                                onclick="activateWarning('GPS / CCTV : Mauvaise fréquentation','Votre score social diminue');
+                                stopped_when_Mona_sad=true;
+                                process(-1,0,&quot;d2_Mona&quot;)">
                                 <p>S'arrêter vers Mona</p>
                           </span>
                           <span class="choice_item"
@@ -224,7 +230,7 @@
                   </div>
               </div>
 
-              <div id="d2_Mona">
+              <div id="d2_Mona" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -239,7 +245,7 @@
                   </div>
               </div>
 
-              <div id="d2_Ignoring_Mona">
+              <div id="d2_Ignoring_Mona" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -254,7 +260,7 @@
                   </div>
               </div>
 
-              <div id="d2_At_home">
+              <div id="d2_At_home" class="scene">
 
                   <div class="text_rec">
                       <p id="d2_At_home_text"></p>
@@ -269,7 +275,7 @@
 
               <!-- Day 3 -->
 
-              <div id="d3_At_school">
+              <div id="d3_At_school" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -277,14 +283,15 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;d3_Director&quot;)">
+                                onclick="activateWarning('Médias sociaux : faible cercle social','Votre score social diminue');
+                                process(0,0,&quot;d3_Director&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d3_Director">
+              <div id="d3_Director" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -292,14 +299,19 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="if(stopped_when_Mona_sad){process(0,0,&quot;d3_Back_home_Mona&quot;)}else{process(0,0,&quot;d3_Back_home_no_Mona&quot;)}">
+                                onclick="activateWarning('CCTV : Comportement violent détecté<br />Université : Année échouée','Votre score civil diminue<br />Votre score social diminue');
+                                if(stopped_when_Mona_sad){
+                                    process(-1,-1,&quot;d3_Back_home_Mona&quot;)
+                                } else {
+                                    process(-1,-1,&quot;d3_Back_home_no_Mona&quot;)
+                                }">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d3_Back_home_Mona">
+              <div id="d3_Back_home_Mona" class="scene">
                   <div class="text_rec">
                       <p>
                           Julien retourne chez lui, il reçoit un message d'un ami qui organise une fête le soir-même. Julien est très tenté par cette soirée, ne serait-ce que pour remonter son score social qui commence à être dangereusement bas. Mais en même temps il a déjà prévu d'aller boire un verre avec Mona. Impossible de faire les deux, Mona ne sera jamais invitée à la soirée. Il doit choisir.
@@ -317,7 +329,7 @@
                   </div>
               </div>
 
-              <div id="d3_Back_home_no_Mona">
+              <div id="d3_Back_home_no_Mona" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -334,7 +346,7 @@
 
               <!-- Rebellion -->
 
-              <div id="rebellions_ending_1">
+              <div id="rebellions_ending_1" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -355,7 +367,7 @@
                   </div>
               </div>
 
-              <div id="rebellions_ending_2">
+              <div id="rebellions_ending_2" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -375,13 +387,13 @@
                   </div>
               </div>
 
-              <div id="rebellions_ending_3">
+              <div id="rebellions_ending_3" class="scene">
                   <p>Image finale pour la fin 'rebellion'</p>
               </div>
 
               <!-- Conformism -->
 
-              <div id="conformisms_ending">
+              <div id="conformisms_ending" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -402,17 +414,24 @@
 
               </div>
 
-              <div id="conformisms_ending_2">
+              <div id="conformisms_ending_2" class="scene">
                   <p>Image finale pour la fin 'conformisme'</p>
               </div>
 
-
-
-
-              <div>
+              <!--<div>
                   <p>Social score : <span id="social_score"></span></p>
                   <p>Civil score : <span id="civil_score"></span></p>
-              </div>
+              </div>-->
+
+
+          </div>
+
+           <!-- Warning that twinkles -->
+
+          <div id="warning">
+              <span id="warning_text_head"></span>
+              <span id="warning_text_what"></span>
+              <span id="warning_text_then"></span>
           </div>
 
       </div>
