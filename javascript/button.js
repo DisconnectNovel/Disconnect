@@ -148,12 +148,21 @@ function process(social_increment, civil_increment, next_scene) {
 }
 
 function updateText_d2_At_school() {
+    let txt = "";
     if (talked_to_Mona) {
-        document.getElementById("d2_At_school_text").innerHTML = "<b>TODO JS</b><br/><br/>Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour et la salue, il s'arrête un moment pour discuter avec elle. Ensuite, il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
+        txt = "De retour à l'université le lendemain, Julien croise Mona dans un couloir. Celle-ci, contente de le voir, le salue chaleureusement et les deux discutent quelques minutes, avant d'avoir leur attention attirée par un des écrans d'information. Il arborait un poster flamboyante présentant l'équipe de basket. << Recherche de nouvelles recrues talentueuses ! >> tonnait l'affiche. Julien, les yeux pétillants d'excitation, avoue qu'il pensait justement rejoindre l'équipe parce qu'il en avait fait plus jeune à un niveau relativement élevé et qu'il aimait profondément l'énergie explosive des matchs de basket. Enthousiaste elle aussi, Mona l'encourage à aller voir l'entraîneur lors de la session de midi pour rencontrer l'équipe et participer à l'échauffement. Julien la remercie pour son idée et file en cours.<br /><br />";
     }
     else {
-        document.getElementById("d2_At_school_text").innerHTML = "<b>TODO JS</b><br/><br/>Le lendemain, Julien retourne à l'université. Il croise Mona dans la cour, mais préfère l'ignorer comme la dernière fois. Il rejoint un groupe d'amis populaire qui sont en train de jouer au basket. Ses amis l'invite à jouer un match avec eux. Julien accepte, mais l'entraîneur de basket l'arrête et lui dit que pour jouer au basket, et suite à une nouvelle loi, il doit d'abord contracter une assurance santé."
+        txt = "De retour à l'université le lendemain, Julien voit Mona de l'autre côté de la cour. Il croise son regard, qui semble vidé d'émotion. Un poster flamboyante présentant l'équipe de basket détourne son attention. << Recherche de nouvelles recrues talentueuses ! >> tonnait l'affiche. Julien sent une bouffée d'excitation s'emparer de lui. Il pensait justement rejoindre l'équipe de basket, en ayant fait plus jeune à un niveau relativement élevé et appréciant profondément ce sport. L'affiche précise de venir à un des entraînements de midi pour faire connaissance et participer à l'échauffement.<br /><br />";
+
     }
+    txt += "Arrivé sur place pour midi, Julien ne tient plus sur place en enfilant son équipement. Déboulant dans le gymnase, il est stoppé net par l'entraîneur.<br />" +
+        "<< Hey, pas si vite mon gars ! T'as rempli les documents de formalités pour pouvoir participer ?<br />" +
+        "— Quels documents ? demande Julien.<br />" +
+        "— Ceux-là, dit l'entraîneur en agitant un paquet de formulaire. Il faut indiquer nom, prénom, assurance santé, année scol–<br />" +
+        "— Quoi ?! Il faut une assurance santé ?! s'inquiète Julien.<br />" +
+        "— C'est la loi, pour les sports avec des contacts entre joueurs c'est obligé. Pas d'assurance, pas de basket. Aller, dehors maintenant et reviens quand tu l'auras faite.>>";
+    document.getElementById("d2_At_school_text").innerHTML = txt;
 }
 
 function updateText_d2_At_health_insurance() {
