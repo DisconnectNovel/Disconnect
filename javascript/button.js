@@ -249,7 +249,3 @@ function activateWarning(msg_what, msg_then, type="bad"){
         $('#warning').removeClass("warning_show");
     }, 6000);
 }
-
-function testtodebug() {
-    alert("yop")
-}
