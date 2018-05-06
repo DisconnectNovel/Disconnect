@@ -216,7 +216,7 @@ var timeout_show_warning
 var timeout_hide_warning
 
 
-function activateWarning(msg_what, msg_when, type="bad"){
+function activateWarning(msg_what, msg_then, type="bad"){
     clearTimeout(timeout_show_warning)
     clearTimeout(timeout_hide_warning)
     document.getElementById("warning_text_what").innerHTML = msg_what
@@ -248,4 +248,8 @@ function activateWarning(msg_what, msg_when, type="bad"){
     timeout_hide_warning = setTimeout(function(){
         $('#warning').removeClass("warning_show");
     }, 6000);
+}
+
+function testtodebug() {
+    alert("yop")
 }
