@@ -156,12 +156,6 @@ function updateText_d2_At_school() {
         txt = "De retour à l'université le lendemain, Julien voit Mona de l'autre côté de la cour. Il croise son regard, qui semble vidé d'émotion. Un poster flamboyante présentant l'équipe de basket détourne son attention. << Recherche de nouvelles recrues talentueuses ! >> tonnait l'affiche. Julien sent une bouffée d'excitation s'emparer de lui. Il pensait justement rejoindre l'équipe de basket, en ayant fait plus jeune à un niveau relativement élevé et appréciant profondément ce sport. L'affiche précise de venir à un des entraînements de midi pour faire connaissance et participer à l'échauffement.<br /><br />";
 
     }
-    txt += "Arrivé sur place pour midi, Julien ne tient plus sur place en enfilant son équipement. Déboulant dans le gymnase, il est stoppé net par l'entraîneur.<br />" +
-        "<< Hey, pas si vite mon gars ! T'as rempli les documents de formalités pour pouvoir participer ?<br />" +
-        "— Quels documents ? demande Julien.<br />" +
-        "— Ceux-là, dit l'entraîneur en agitant un paquet de formulaire. Il faut indiquer nom, prénom, assurance santé, année scol–<br />" +
-        "— Quoi ?! Il faut une assurance santé ?! s'inquiète Julien.<br />" +
-        "— C'est la loi, pour les sports avec des contacts entre joueurs c'est obligé. Pas d'assurance, pas de basket. Aller, dehors maintenant et reviens quand tu l'auras faite.>>";
     document.getElementById("d2_At_school_text").innerHTML = txt;
 }
 
