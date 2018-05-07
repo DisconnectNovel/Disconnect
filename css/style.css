@@ -56,7 +56,7 @@ body {
 
 
 
-#scenes>div{
+#scenes>.scene{
     top:0px;
     position:absolute;
     opacity:0;
@@ -154,4 +154,49 @@ body {
   opacity:1;
   -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=1);
+}
+
+/* Warning */
+
+#warning{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    color: white;
+    left: 0%;
+    top: 10%;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+    opacity:0;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    padding: 0px;
+    font-family: "Consolas", Courier, monospace;
+    font-size: 14px;
+    border-radius: 2px;
+}
+
+@keyframes blinker_bad {
+  50% {
+    background: rgba(204,0,0,0.5);
+    box-shadow:0 0 30px 30px rgba(204,0,0,0.5);
+  }
+}
+
+@keyframes blinker_good {
+  50% {
+    background: rgba(0,160,0,0.5);
+    box-shadow:0 0 30px 30px rgba(0,160,0,0.5);
+  }
+}
+
+#warning.warning_show{
+    opacity: 1;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=1);
+    animation: blinker_bad 1s ease-in-out infinite;
 }
