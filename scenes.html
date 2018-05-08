@@ -13,7 +13,7 @@
   <body>
       <script>
         window.onload = function() {
-            current_scene = "At_the_studio"
+            current_scene = "d1_Waking_Up"
             $("#fading img").removeClass("opaque");
             $("#scenes div").removeClass("opaque");
             $("#" + current_scene).addClass("opaque");
@@ -28,78 +28,127 @@
 
       <div class="flex-container">
           <div id="fading" class="shadow">
-            <img id="At_the_studio_img" src="images/day1/1_room-morning.png"/>
+              <!--
+            <img id="At_the_studio_img" src="images/day1/2_breakfast.png"/>
             <img id="At_the_metro_station_img" src="images/day1/3_metro-terminal.png"/>
             <img id="In_the_streets_img" src="images/day1/5_streets.png"/>
             <img id="At_school_img" src="images/day1/7.0_school-court.png"/>
             <img id="At_the_supermarket_img" src="images/day1/9_supermarket.png"/>
             <img id="Back_home_img" src="images/day1/2_breakfast.png"/>
-            <img id="Back_home2_img" src="images/day1/2_breakfast.png"/>
-            <img id="At_the_supermarket_img" src="images/day1/9_supermarket.png"/>
+            <img id="Back_home2_img" src="images/day1/1_room-morning.png"/>
 
             <img id="d2_At_school_img" src="images/day2/11_school-entrance.png"/>
             <img id="d2_At_basket_img" src="images/day2/12_basketball.png"/>
             <img id="d2_At_health_insurance_img" src="images/day2/13_health.png"/>
-            <img id="d2_Way_back_home_img" src="images/day2/11_school-entrance.png"/>
+            <img id="d2_Way_back_home_img" src="images/day2/14_metro_refused.png"/>
             <img id="d2_Way_back_home_Mona_img" src="images/day2/11_school-entrance.png"/>
-            <img id="d2_Mona_img" src="images/day2/11_school-entrance.png"/>
+            <img id="d2_Mona_img" src="images/day2/11.2_school_mona.png"/>
             <img id="d2_Ignoring_Mona_img" src="images/day2/11_school-entrance.png"/>
             <img id="d2_At_home_img" src="images/day2/15_back-home.png"/>
 
-            <img id="d3_At_school_img" src="images/day2/11_school-entrance.png"/>
-            <img id="d3_Director_img" src="images/day2/11_school-entrance.png"/>
+            <img id="d3_At_school_img" src="images/day3/16_school_guys.png"/>
+            <img id="d3_Director_img" src="images/day2/13_health.png"/>
             <img id="d3_Back_home_Mona_img" src="images/day2/11_school-entrance.png"/>
             <img id="d3_Back_home_no_Mona_img" src="images/day2/11_school-entrance.png"/>
 
             <img id="rebellions_ending_1_img" src="images/day2/11_school-entrance.png"/>
             <img id="rebellions_ending_2_img" src="images/day2/11_school-entrance.png"/>
-            <img id="rebellions_ending_3_img" src="images/day2/11_school-entrance.png"/>
+            <img id="rebellions_ending_3_img" src="images/endings/rebellion.png"/>
             <img id="conformisms_ending_img" src="images/day2/11_school-entrance.png"/>
-            <img id="conformisms_ending_2_img" src="images/day2/11_school-entrance.png"/>
+            <img id="conformisms_ending_2_img" src="images/endings/conformist.png"/>  -->
+
+            <img id="d1_Waking_Up_img" src="images/day1/1_room-morning.png" />
+            <img id="d1_Breakfast_img" src="images/day1/2_breakfast.png" />
+            <img id="d1_Metro_Terminal_img" src="images/day1/3_metro-terminal.png" />
+            <img id="d1_Metro_Station_img" src="images/day1/4_metro-station.png" />
+            <img id="d1_Pedestrian_Crossing_img" src="images/day1/5_streets.png" />
+            <img id="d1_Arriving_At_School_img" src="images/day1/6_school-entrance.png" />
+            <img id="d1_Making_A_Choice_img" src="images/day1/7.0_school-court.png" />
+            <img id="d1_Choose_Guys_img" src="images/day1/7.1_school_guys.png" />
+            <img id="d1_Choose_Mona_img" src="images/day1/7.2_school_mona.png" />
+            <img id="d1_In_the_classroom_img" src="images/day1/8_classroom.png" />
+            <img id="d1_At_the_supermarket_img" src="images/day1/9_supermarket.png" />
+
+            <img id="d2_Leaving_Home_img" src="images/day2/10_leaving.png" />
+            <img id="d2_Arriving_At_School_img" src="images/day2/11_school-entrance.png" />
+            <img id="d2_Chosen_Mona_img" src="images/day2/11.2_school_mona.png" />
+            <img id="d2_Basket_Field_img" src="images/day2/12_basketball.png" />
+            <img id="d2_Health_Insurance_img" src="images/day2/13_health.png" />
+            <img id="d2_Metro_Refused_img" src="images/day2/14_metro_refused.png" />
+            <!-- <img id="d2_Mona_Crying_img" src="images/day2/15_back-home.png" /> -->
+            <img id="d2_Back_Home_img" src="images/day2/15_back-home.png" />
+
+            <img id="d3_School_Guys_img" src="images/day3/16_school_guys.png" />
+            <img id="d3_Before_Event_with_Mona_img" src="images/day3/17_room-night.png" />
+            <img id="d3_Before_Event_without_Mona_img" src="images/day3/17_room-night.png" />
+
+            <img id="Ending_Conformist_2_img" src="images/endings/conformist.png" />
+            <img id="Ending_Rebellion_3_img" src="images/endings/rebellion.png" />
           </div>
 
-
           <div id="scenes">
+              <div id="d1_Waking_Up" class="scene">
+                  <div class="text_rec">
+                      <p>
+                          Une nouvelle journée commence. Le réveil sonne: 7h30. Encore groggy de sommeil, Julien se lève, s'habille péniblement et se traîne dans la cuisine pour préparer son petit déjeuner.
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item" onclick="process(0,0,&quot;d1_Breakfast&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
 
-              <div id="At_the_studio" class="scene">
+              <div id="d1_Breakfast" class="scene">
 
                   <div class="text_rec">
                       <p>
-                          Une nouvelle journée commence. Le réveil sonne: 7h30. Encore groggy de sommeil, Julien se lève, s'habille péniblement et se traîne dans la cuisine pour préparer son petit déjeuner. Se réveillant petit à petit en regardant des news sur sa tablette, il lit un article vantant les avantages de stocker son ADN dans une base de donnée médicale. "Retrouvez vos origines ancestrales et vos cousins éloignés en 24 heures !", titre l'article. Au bas de celui-ci, une pub offre une réduction de prix importante sur la procédure de stockage, la rendant très abordable. Julien hésite: l'offre est excitante mais semble trop belle pour être vraie.
+                          Se réveillant petit à petit en regardant des news sur sa tablette, il lit un article vantant les avantages de stocker son ADN dans une base de donnée médicale. "Retrouvez vos origines ancestrales et vos cousins éloignés en 24 heures !", titre l'article. Au bas de celui-ci, une pub offre une réduction de prix importante sur la procédure de stockage, la rendant très abordable. Julien hésite: l'offre est excitante mais semble trop belle pour être vraie.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="dna_stored = true; process(0,0,&quot;At_the_metro_station&quot;)">
+                                onclick="dna_stored = true; process(0,0,&quot;d1_Metro_Terminal&quot;)">
                                 <p>Saisir l'occasion et envoyer son ADN</p>
                           </span>
                           <span class="choice_item"
-                                onclick="dna_stored = false; process(0,0,&quot;At_the_metro_station&quot;)">
+                                onclick="dna_stored = false; process(0,0,&quot;d1_Metro_Terminal&quot;)">
                                 <p>Décliner l'offre</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="At_the_metro_station" class="scene">
-
+              <div id="d1_Metro_Terminal" class="scene">
                   <div class="text_rec">
                       <p>
                           En chemin pour le métro qui l'aménera à l'université, Julien passe devant les nouveaux panneaux de publicité SmartPub® – récemment installés – qui à son approche changent pour afficher différentes pubs montrant les mérites du big data, du stockage d'ADN et la reconnaissance faciale. Aux portes du métro, il voit une femme se faire stopper par un agent qui l'empêche de monter. Celui-ci lui explique que le système l'a reconnue via les caméras et qu'il a signalé que son abonnement associé n'était plus valable. Après toutes ces années, Julien avait presque oublié que le contrôle par système de reconnaissance faciale se faisait en permanence dès l'entrée dans la bouche de métro.
-                          <br/><br/>
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;d1_Metro_Station&quot;)">
+                              <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <div id="d1_Metro_Station" class="scene">
+                  <div class="text_rec">
+                      <p>
                           Une fois dans le wagon, il reçoit une notification sur son smartphone lui conseillant d'éviter une personne au <b>score social</b> faible (catégorie: peu fréquentable) présente dans ce même wagon. Julien lève les yeux et aperçoit un homme seul dans un coin, entouré d'un cordon invisible que personne ne semble vouloir franchir. "Il a l'air plutôt normal pourtant", pense Julien, "mais on dit que les apparences sont trompeuses".
                           <br/><br/>
                           Repensant à la femme sur le quai, il laisse son esprit vagabonder sur les anciennes méthodes de contrôle d'identité qu'il avait apprises en cours d'histoire, entièrement basées sur des agents humains (qu'on disait biaisés). Ses réflexions furent interrompues par une voix lasse, annonçant au micro un retard dû à un accident de personne. Julien espère ne pas être en retard aux cours.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;In_the_streets&quot;)">
+                                onclick="process(0,0,&quot;d1_Pedestrian_Crossing&quot;)">
                               <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="In_the_streets" class="scene">
+              <div id="d1_Pedestrian_Crossing" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -107,19 +156,32 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="activateWarning('Le GPS indique une infraction','Votre score civil diminue');process(0,-1,&quot;At_school&quot;)">
+                                onclick="activateWarning('Le GPS indique une infraction.','Votre score civil diminue.');process(0,-1,&quot;d1_Arriving_At_School&quot;)">
                                 <p>Passer au rouge et arriver juste à l'heure</p>
                           </span>
                           <span class="choice_item"
-                                onclick="activateWarning('Vous êtes arrivé en retard','Votre score social diminue');process(-1,0,&quot;At_school&quot;)">
+                                onclick="activateWarning('Vous êtes arrivé en retard.','Votre score social diminue.');process(-1,0,&quot;d1_Arriving_At_School&quot;)">
                                 <p>Attendre le feu vert et arriver assurément en retard</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="At_school" class="scene">
+              <div id="d1_Arriving_At_School" class="scene">
+                  <div class="text_rec">
+                      <p>
+                          <b>TODO: écrire arrivée</b><br/><br/>
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(-1,0,&quot;d1_Making_A_Choice&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
 
+              <div id="d1_Making_A_Choice" class="scene">
                   <div class="text_rec">
                       <p>
                           <b>TODO: rework</b><br/><br/>
@@ -127,20 +189,60 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="activateWarning('Mauvaise fréquentation','Votre score social diminue');
+                                onclick="activateWarning('Mauvaise fréquentation','Votre score social diminue.');
                                 talked_to_Mona=true;
-                                process(-1,0,&quot;At_the_supermarket&quot;)">
+                                process(-1,0,&quot;d1_Choose_Mona&quot;)">
                                 <p>Aller discuter avec Mona</p>
                           </span>
                           <span class="choice_item"
-                                onclick="activateWarning('Bonne fréquentation','Votre score social augmente', 'good');process(1,0,&quot;At_the_supermarket&quot;)">
+                                onclick="activateWarning('Bonne fréquentation','Votre score social augmente.', 'good');
+                                         process(1,0,&quot;d1_Choose_Guys&quot;)">
                                 <p>Rejoindre le groupe d'étudiants</p>
                           </span>
                       </div>
                   </div>
               </div>
+              <div id="d1_Choose_Mona" class="scene">
+                  <div class="text_rec">
+                      <p>
+                          <b>TODO: parler à Mona</b><br/><br/>
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(-1,0,&quot;d1_In_the_classroom&quot;)">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <div id="d1_Choose_Guys" class="scene">
+                  <div class="text_rec">
+                      <p>
+                          <b>TODO: parler aux guys </b><br/><br/>
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(-1,0,&quot;d1_In_the_classroom&quot;)">
+                              <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <div id="d1_In_the_classroom" class="scene">
+                  <div class="text_rec">
+                      <p>
+                          <b>TODO: classroom scene</b><br/><br/>
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(-1,0,&quot;d1_At_the_supermarket&quot;)">
+                              <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
 
-              <div id="At_the_supermarket" class="scene">
+              <div id="d1_At_the_supermarket" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -151,19 +253,18 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="fidelity_card=true;process(0,0,&quot;Back_home&quot;)">
+                                onclick="fidelity_card=true;process(0,0,&quot;d1_Back_Home&quot;)">
                                 <p>Obtenir la carte</p>
                           </span>
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;Back_home&quot;)">
+                                onclick="process(0,0,&quot;d1_Back_Home&quot;)">
                                 <p>Rejeter la proposition</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="Back_home" class="scene">
-
+              <div id="d1_Back_Home" class="scene">
                   <div class="text_rec">
                       <p>
                           <b>TODO</b><br/><br/>
@@ -171,18 +272,18 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="ran=true;process(0,0,&quot;Back_home2&quot;)">
+                                onclick="ran=true;process(0,0,&quot;d1_Back_Home2&quot;)">
                                 <p>Aller courir</p>
                           </span>
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;Back_home2&quot;)">
+                                onclick="process(0,0,&quot;d1_Back_Home2&quot;)">
                                 <p>Regarder le film</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="Back_home2" class="scene">
+              <div id="d1_Back_Home2" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -191,7 +292,7 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="updateText_d2_At_school();process(0,0,&quot;d2_At_school&quot;)">
+                                onclick="updateText_d2_At_school();process(0,0,&quot;d2_Leaving_Home&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
@@ -200,66 +301,97 @@
 
               <!-- Day 2 -->
 
-              <div id="d2_At_school" class="scene">
+              <div id="d2_Leaving_Home" class="scene">
 
+                  <div class="text_rec">
+                      <p>
+                          <b>TODO écrire "quitter maison"</b><br/><br/>
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="updateText_d2_At_school();process(0,0,&quot;d2_Arriving_At_School&quot;)">
+                              <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_Arriving_At_School" class="scene">
                   <div class="text_rec">
                       <p id="d2_At_school_text"></p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;d2_At_basket&quot;)">
+                                onclick="if (talked_to_Mona)
+                                           process(0,0,&quot;d2_Chosen_Mona&quot;)
+                                         else
+                                           process(0,0,&quot;d2_Basket_Field&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_At_basket" class="scene">
+              <div id="d2_Chosen_Mona" class="scene">
                   <div class="text_rec">
-                      <p id="d2_At_school_text">
+                      <p>
+                          TODO Texte croisé mona
+                      </p>
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="process(0,0,&quot;d2_Basket_Field&quot;)">
+                              <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="d2_Basket_Field" class="scene">
+                  <div class="text_rec">
+                      <p>
                           Arrivé sur place pour midi, Julien ne tient plus sur place en enfilant son équipement. Déboulant dans le gymnase, il est stoppé net par l'entraîneur.<br />
                           << Hey, pas si vite mon gars ! T'as rempli les documents de formalités pour pouvoir participer ?<br />
                           — Quels documents ? demande Julien.<br />
                           — Ceux-là, dit l'entraîneur en agitant un paquet de formulaire. Il faut indiquer nom, prénom, assurance santé, année scol–<br />
                           — Quoi ?! Il faut une assurance santé ?! s'inquiète Julien.<br />
-                          — C'est la loi, pour les sports avec des contacts entre joueurs c'est obligé. Pas d'assurance, pas de basket. Aller, si tu fonces tu peux la faire maintenant et revenir avant qu'on n'ai fini.>>
+                          — ... Oui, répond l'entraîneur, un peu agacé de s'être fait interrompre, c'est la loi. Pour les sports avec des contacts entre joueurs c'est devenu obligé. Pas d'assurance, pas de basket. Aller, si tu bouges ces petites jambes tu peux foncer la faire maintenant et revenir avant qu'on n'ai fini.>>
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="updateText_d2_At_health_insurance();process(0,0,&quot;d2_At_health_insurance&quot;)">
+                                onclick="updateText_d2_At_health_insurance();process(0,0,&quot;d2_Health_Insurance&quot;)">
                               <p>Courir faire une assurance</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_At_health_insurance" class="scene">
+              <div id="d2_Health_Insurance" class="scene">
 
                   <div class="text_rec">
                       <p id="d2_At_health_insurance_text"></p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="activateWarning('CCTV : Comportement violent détecté','Votre score civil diminue');
-                                updateText_d2_Way_back_home();process(0,-1,&quot;d2_Way_back_home&quot;)">
+                                onclick="activateWarning('CCTV : Comportement violent détecté','Votre score civil diminue.');
+                                updateText_d2_Way_back_home();process(0,-1,&quot;d2_Metro_Refused&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_Way_back_home" class="scene">
+              <div id="d2_Metro_Refused" class="scene">
 
                   <div class="text_rec">
                       <p id="d2_Way_back_home_text"></p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;d2_Way_back_home_Mona&quot;)">
+                                onclick="process(0,0,&quot;d2_Mona_Crying&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_Way_back_home_Mona" class="scene">
+              <div id="d2_Mona_Crying" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -268,20 +400,20 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="activateWarning('GPS / CCTV : Mauvaise fréquentation','Votre score social diminue');
+                                onclick="activateWarning('GPS / CCTV : Mauvaise fréquentation','Votre score social diminue.');
                                 stopped_when_Mona_sad=true;
-                                process(-1,0,&quot;d2_Mona&quot;)">
+                                process(-1,0,&quot;d2_Talk_To_Mona&quot;)">
                                 <p>S'arrêter vers Mona</p>
                           </span>
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;d2_Ignoring_Mona&quot;)">
+                                onclick="process(0,0,&quot;d2_Ignore_Mona&quot;)">
                                 <p>Ignorer Mona</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_Mona" class="scene">
+              <div id="d2_Talk_To_Mona" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -297,14 +429,14 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="updateText_d2_At_home();process(0,0,&quot;d2_At_home&quot;)">
+                                onclick="updateText_d2_At_home();process(0,0,&quot;d2_Back_Home&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_Ignoring_Mona" class="scene">
+              <div id="d2_Ignore_Mona" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -313,20 +445,19 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="updateText_d2_At_home();process(0,0,&quot;d2_At_home&quot;)">
-                                <p>Continuer</p>
+                                onclick="updateText_d2_At_home();process(0,0,&quot;d2_Back_Home&quot;)">
+                              <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d2_At_home" class="scene">
-
+              <div id="d2_Back_Home" class="scene">
                   <div class="text_rec">
                       <p id="d2_At_home_text"></p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;d3_At_school&quot;)">
+                                onclick="process(0,0,&quot;d3_School_Guys&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
@@ -335,7 +466,7 @@
 
               <!-- Day 3 -->
 
-              <div id="d3_At_school" class="scene">
+              <div id="d3_School_Guys" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -344,7 +475,7 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="activateWarning('Médias sociaux : faible cercle social','Votre score social diminue');
+                                onclick="activateWarning('Médias sociaux : faible cercle social','Votre score social diminue.');
                                 process(0,0,&quot;d3_Director&quot;)">
                                 <p>Continuer</p>
                           </span>
@@ -361,11 +492,11 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="activateWarning('CCTV : Comportement violent détecté<br />Université : Année échouée','Votre score civil diminue<br />Votre score social diminue');
+                                onclick="activateWarning('CCTV : Comportement violent détecté<br />Université : Année échouée','Votre score civil diminue.<br />Votre score social diminue.');
                                 if(stopped_when_Mona_sad){
-                                    process(-1,-1,&quot;d3_Back_home_Mona&quot;)
+                                    process(-1,-1,&quot;d3_Before_Event_with_Mona&quot;)
                                 } else {
-                                    process(-1,-1,&quot;d3_Back_home_no_Mona&quot;)
+                                    process(-1,-1,&quot;d3_Before_Event_without_Mona&quot;)
                                 }">
                                 <p>Continuer</p>
                           </span>
@@ -373,7 +504,7 @@
                   </div>
               </div>
 
-              <div id="d3_Back_home_Mona" class="scene">
+              <div id="d3_Before_Event_with_Mona" class="scene">
                   <div class="text_rec">
                       <p>
                           <b>TODO</b><br/><br/>
@@ -381,18 +512,18 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;rebellions_ending_1&quot;)">
+                                onclick="process(0,0,&quot;Ending_Rebellion_1&quot;)">
                                 <p>Aller voir Mona comme prévu</p>
                           </span>
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;conformisms_ending&quot;)">
+                                onclick="process(0,0,&quot;Ending_Conformist_1&quot;)">
                                 <p>Aller à la fête de son ami</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="d3_Back_home_no_Mona" class="scene">
+              <div id="d3_Before_Event_without_Mona" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -401,7 +532,7 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;conformisms_ending&quot;)">
+                                onclick="process(0,0,&quot;Ending_Conformist_1&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
@@ -410,7 +541,7 @@
 
               <!-- Rebellion -->
 
-              <div id="rebellions_ending_1" class="scene">
+              <div id="Ending_Rebellion_1" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -425,14 +556,14 @@
 
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;rebellions_ending_2&quot;)">
+                                onclick="process(0,0,&quot;Ending_Rebellion_2&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="rebellions_ending_2" class="scene">
+              <div id="Ending_Rebellion_2" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -446,20 +577,20 @@
 
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;rebellions_ending_3&quot;)">
+                                onclick="process(0,0,&quot;Ending_Rebellion_3&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
                   </div>
               </div>
 
-              <div id="rebellions_ending_3" class="scene">
-                  <p>Image finale pour la fin 'rebellion'</p>
+              <div id="Ending_Rebellion_3" class="scene">
+                  <!-- <p>Image finale pour la fin 'rebellion'</p> -->
               </div>
 
               <!-- Conformism -->
 
-              <div id="conformisms_ending" class="scene">
+              <div id="Ending_Conformist_1" class="scene">
 
                   <div class="text_rec">
                       <p>
@@ -473,7 +604,7 @@
 
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;conformisms_ending_2&quot;)">
+                                onclick="process(0,0,&quot;Ending_Conformist_2&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
@@ -481,8 +612,8 @@
 
               </div>
 
-              <div id="conformisms_ending_2" class="scene">
-                  <p>Image finale pour la fin 'conformisme'</p>
+              <div id="Ending_Conformist_2" class="scene">
+                  <!-- <p>Image finale pour la fin 'conformisme'</p> -->
               </div>
 
               <!--<div>
