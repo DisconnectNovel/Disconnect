@@ -141,7 +141,7 @@ function updateText_d2_At_school() {
 function updateText_d2_At_health_insurance() {
 
     let text = "";
-    text += "Julien arrive haletant dans la compagnie d'assurance la plus proche. Arrivé à l'accueil, il demande des renseignements pour contracter une assurance santé et on le redirige vers un vieil agent à l'air sec qui prendra en charge son dossier. Après s'être assis et avoir prouvé son identité, Julien observe l'agent pianoter sur son clavier avant de se retourner vers lui. D'un ton monotone celui-ci déclare que l'assurance refuse son dossier et en énumère les raisons: <br/><br/>";
+    text += "Julien arrive haletant dans la compagnie d'assurance la plus proche. Arrivé à l'accueil, il demande des renseignements pour contracter une assurance santé et on le redirige vers un vieil agent à l'air sec qui prendra en charge son dossier. Après s'être assis et avoir prouvé son identité, Julien observe l'agent pianoter sur son clavier avant de se retourner vers lui. D'un ton monotone celui-ci déclare que l'assurance refuse son dossier et en énumère les raisons: <br/>";
 
     if (dna_stored) {
         text += "  - L'ADN que Julien avait envoyé précédemment indique des probabilités de maladie supérieures à la moyenne.<br />";
