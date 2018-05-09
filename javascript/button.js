@@ -130,6 +130,7 @@ function launch_outro(name) {
     if (name == "rebellion") {
         setTimeout(function(){
             $("#rebellion_outro").css("display", "inline");
+            document.getElementById("rebellion_outro_video").play();
         }, 1000);
     }
     let body_width = $("body").width()
