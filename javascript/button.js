@@ -8,6 +8,7 @@ var fidelity_card = false
 var ran = false
 var talked_to_Mona = false
 var stopped_when_Mona_sad = false
+var show_text = true
 
 var current_scene
 
@@ -48,9 +49,9 @@ function resizeImage() {
     let width_body = $("body").width()
 
     if (FULL_SCREEN_IMG) {
-        $("img").css("object-fit","cover")
-        $("img").css("width", "100%")
-        $("img").css("height", "100%")
+        $("#fading img").css("object-fit","cover")
+        $("#fading img").css("width", "100%")
+        $("#fading img").css("height", "100%")
 
         let height_text = $("#"+current_scene + " .text_rec").height()
         $("#"+current_scene + " .text_rec").css("top", height_body - height_text - 40)
@@ -89,18 +90,13 @@ function resizeImage() {
         let height_text = $("#"+current_scene + " .text_rec").height()
         $("#"+current_scene + " .text_rec").css("top", height_body - height_text - 40)
     }
-    /*let height_text = $("#"+current_scene + " .text_rec").height()
-    $("#"+current_scene + " .text_rec").css("top", height_body - height_text - 40)*/
+    setMinimizer()
 }
 
 function process(social_increment, civil_increment, next_scene) {
     current_scene = next_scene
-    //alert(String(social_increment) + " " + String(civil_increment) + " " + String(increment))
     social_score += social_increment
     civil_score += civil_increment
-
-    /*document.getElementById("social_score").innerHTML = social_score
-    document.getElementById("civil_score").innerHTML = civil_score*/
 
     // Put all the images as transparent
     $("#fading img").removeClass("opaque");
@@ -124,6 +120,8 @@ function process(social_increment, civil_increment, next_scene) {
         let height_img = parseInt($("#"+current_scene + "_img").height())
         $("#"+current_scene + " .text_rec").css("top", top_img + height_img - height_total - 40)
     }
+
+    setMinimizer()
 }
 
 function updateText_d2_At_school() {
@@ -177,29 +175,6 @@ function updateText_d2_At_home() {
 }
 
 
-
-/*
-function initialize() {
-    localStorage.setItem("social_score", 10);
-    localStorage.setItem("civil_score", 10);
-    localStorage.setItem("warn_before_leaving_page", "true")
-    localStorage.setItem("current_scene", "scene1")
-}
-
-function process(social_increment, civil_increment, next_page) {
-    let new_social_score = parseInt(localStorage.getItem("social_score")) + social_increment
-    let new_civil_score = parseInt(localStorage.getItem("civil_score")) + civil_increment
-    localStorage.setItem("social_score", new_social_score);
-    localStorage.setItem("civil_score", new_civil_score);
-
-    go_to_page(next_page)
-}
-
-function go_to_page(next_page) {
-    localStorage.setItem("warn_before_leaving_page", "false")
-    window.location.href = next_page;
-}*/
-
 var d = new Date()
 var color_bad_full = "rgba(204,0,0,1)"
 var color_bad_mid = "rgba(204,0,0,0.5)"
@@ -241,4 +216,28 @@ function activateWarning(msg_what, msg_then, type="bad"){
     timeout_hide_warning = setTimeout(function(){
         $('#warning').removeClass("warning_show");
     }, 6000);
+}
+
+function minimize() {
+    show_text = !show_text
+    if (!show_text) {
+        $("#scenes .opaque .text_rec").css("height", "0px")
+        $("#scenes .opaque .text_rec").css("overflow", "hidden")
+        let height_body = $("body").height()
+        $("#scenes .opaque .text_rec").css("top", height_body - 40)
+    }
+    else {
+        let height_text = $("#"+current_scene + " .text_rec p").height()
+        let height_choice = $("#"+current_scene + " .choice span").height()
+        let height_total = height_text + height_choice
+        $("#scenes .opaque .text_rec").css("height", height_total)
+        let height_body = $("body").height()
+        $("#scenes .opaque .text_rec").css("top", (height_body - height_total - 40))
+    }
+    setMinimizer()
+}
+
+function setMinimizer() {
+    let top_minimizer = parseInt($("#"+current_scene + " .text_rec").css("top"))-16
+    $("#minimize").css("top", top_minimizer)
 }
