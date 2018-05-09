@@ -10,6 +10,7 @@ var talked_to_Mona = false
 var stopped_when_Mona_sad = false
 
 var current_scene
+var show_text = true
 
 /*var scenes = ["At_the_studio",
               "At_the_metro_station",
@@ -48,9 +49,9 @@ function resizeImage() {
     let width_body = $("body").width()
 
     if (FULL_SCREEN_IMG) {
-        $("img").css("object-fit","cover")
-        $("img").css("width", "100%")
-        $("img").css("height", "100%")
+        $("#fading img").css("object-fit","cover")
+        $("#fading img").css("width", "100%")
+        $("#fading img").css("height", "100%")
 
         let height_text = $("#"+current_scene + " .text_rec").height()
         $("#"+current_scene + " .text_rec").css("top", height_body - height_text - 40)
@@ -91,6 +92,7 @@ function resizeImage() {
     }
     /*let height_text = $("#"+current_scene + " .text_rec").height()
     $("#"+current_scene + " .text_rec").css("top", height_body - height_text - 40)*/
+    $("#minimize_img").css("top", (height_body-52))
 }
 
 function process(social_increment, civil_increment, next_scene) {
@@ -248,4 +250,24 @@ function activateWarning(msg_what, msg_then, type="bad"){
     timeout_hide_warning = setTimeout(function(){
         $('#warning').removeClass("warning_show");
     }, 6000);
+}
+
+function minimize() {
+    show_text = !show_text
+    if (!show_text) {
+        $("#scenes .opaque .text_rec").css("height", "0px")
+        $("#scenes .opaque .text_rec").css("overflow", "hidden")
+        let height_body = $("body").height()
+        $("#scenes .opaque .text_rec").css("top", height_body - 40)
+        $("#minimize_img").css("top", (height_body-52))
+    }
+    else {
+        let height_text = $("#"+current_scene + " .text_rec p").height()
+        let height_choice = $("#"+current_scene + " .choice span").height()
+        let height_total = height_text + height_choice
+        $("#scenes .opaque .text_rec").css("height", height_total)
+        let height_body = $("body").height()
+        $("#scenes .opaque .text_rec").css("top", (height_body - height_total - 40))
+        $("#minimize_img").css("top", (height_body-52))
+    }
 }
