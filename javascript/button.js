@@ -132,7 +132,7 @@ function updateText_d2_At_school() {
         txt = "De retour à l'université le lendemain, Julien croise Mona sur son banc. Celle-ci, contente de le voir, le salue chaleureusement et lui fait signe d'approcher.";
     }
     else {
-        txt = "De retour à l'université le lendemain, Julien voit Mona de l'autre côté de la cour. Il croise son regard, qui semble vidé d'émotion. Un poster flamboyante présentant l'équipe de basket détourne son attention. << Recherche de nouvelles recrues talentueuses ! >> tonnait l'affiche. Julien sent une bouffée d'excitation s'emparer de lui. Il pensait justement rejoindre l'équipe de basket, en ayant fait plus jeune à un niveau relativement élevé et appréciant profondément ce sport. L'affiche précise de venir à un des entraînements de midi pour faire connaissance et participer à l'échauffement.<br /><br />";
+        txt = "De retour à l'université le lendemain, Julien voit Mona de l'autre côté de la cour. Il croise son regard, qui semble vidé d'émotion. Un poster flamboyante présentant l'équipe de basket détourne son attention. << Recherche de nouvelles recrues talentueuses ! >> tonnait l'affiche. Julien sent une bouffée d'excitation s'emparer de lui. Il pensait justement rejoindre l'équipe de basket, en ayant fait plus jeune à un niveau relativement élevé et appréciant profondément ce sport. L'affiche précise de venir à l'un des entraînements de midi pour faire connaissance et participer à l'échauffement.<br /><br />";
 
     }
     document.getElementById("d2_At_school_text").innerHTML = txt;
@@ -164,14 +164,14 @@ function updateText_d2_At_health_insurance() {
         text += "  - Les données récoltées à partir du GPS du téléphone de Julien indiquent qu'il se déplace peu, et donc qu'il fait très peu de sport.<br />";
     }
 
-    text += "<br />L'agent avertit Julien que s'il souhaite vraiment obtenir une assurance santé, le prix sera nettement plus élevé pour prendre en compte les facteurs de risque. Julien, choqué, se rend compte il n'est pas capable de payer une telle somme et qu'il doit abandonner le basket. Une fois remis du choc, il sent une colère bouillonnante monter en lui: << Si je veux me faire assurer, c'est justement pour pour pouvoir faire du sport et par conséquent diminuer mes risques, pourquoi vous ne me laissez pas le faire ! >> fulmine-t-il à l'agent en tapant du poing sur la table. La sécurité est appelée mais Julien sort en coup de vent qu'elle n'ai eu le temps d'arriver.<br /><br />Une caméra à l'intérieur de la pièce a enregistré la scène.";
+    text += "<br />L'agent avertit Julien que s'il souhaite vraiment obtenir une assurance santé, le prix sera nettement plus élevé pour prendre en compte les facteurs de risque. Julien, choqué, se rend compte il n'est pas capable de payer une telle somme et qu'il doit abandonner l'idée de faire du basket. Une fois remis du choc, il sent une colère bouillonnante monter en lui: << Si je veux me faire assurer, c'est justement pour pour pouvoir faire du sport et par conséquent diminuer mes risques, pourquoi vous ne me laissez pas le faire ! >> fulmine-t-il à l'agent en tapant du poing sur la table. La sécurité est appelée mais Julien sort en coup de vent qu'elle n'ai eu le temps d'arriver.<br /><br />Une caméra à l'intérieur de la pièce a enregistré la scène.";
     document.getElementById("d2_At_health_insurance_text").innerHTML = text;
 }
 
 function updateText_d2_At_home() {
     let text = "Le soir, après s'être calmé un peu, Julien lance un des jeux de réflexion sur smartphone qu'il apprécie. Il n'est pas forcément très bon mais << Au moins je peux faire des erreurs sans que ça me retombe dessus >> aime-t-il dire en souriant. <br/>";
     if (stopped_when_Mona_sad) {
-        text+= "Il reçoit alors un message bizarre d'un ami de l'université qui l'aurait vu en companie de Mona. Celui-ci lui demande pourquoi il perd son temps avec une fille comme ça et l'avertit qu'il risque de gâcher sa vie comme ça. Julien est surpris que des gens s'intéressent à ce point à qui il parle.";
+        text+= "Il reçoit alors un message bizarre d'un ami de l'université qui l'aurait vu en companie de Mona. Celui-ci lui demande pourquoi il perd son temps avec une fille comme ça et l'avertit qu'il risque de gâcher sa vie s'il continue à la fréquenter. Julien est surpris que des gens s'intéressent à ce point aux gens à qui il parle.";
     }
     document.getElementById("d2_At_home_text").innerHTML = text
 }
@@ -220,12 +220,12 @@ function activateWarning(msg_what, msg_then, type="bad"){
     let pos_text = "calc(" + left.toString() + "px - 10%)";
     $("#warning").css("left", pos_text)
     if (type == "good") {
-        document.getElementById("warning_text_head").innerHTML = "Information"
+        //document.getElementById("warning_text_head").innerHTML = "Information"
         $("#warning").css("background", color_good_full)
         $("#warning").css("box-shadow", "0 0 30px 30px rgba(0,160,0,1)")
     }
     else {
-        document.getElementById("warning_text_head").innerHTML = "Avertissement"
+        //document.getElementById("warning_text_head").innerHTML = "Avertissement"
         $("#warning").css("background", color_bad_full)
         $("#warning").css("box-shadow", "0 0 30px 30px rgba(204,0,0,1)")
     }

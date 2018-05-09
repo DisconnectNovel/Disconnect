@@ -90,7 +90,7 @@
               <div id="d1_Waking_Up" class="scene">
                   <div class="text_rec">
                       <p>
-                          Une nouvelle journée commence. L'alarme sonne: 7h30. Encore embué de sommeil, Julien attrape son smartphone pour éteindre la sonnerie et au passage regarder les notifications qu'il a reçues durant la nuit. Quelques-uns de ses amis ont liké la photo qu'il avait postée le soir d'avant. Content, il se lève pour aller prendre son petit-déjeuner.
+                          Une nouvelle journée commence. L'alarme sonne: 7h30. Encore embué de sommeil, Julien attrape son smartphone pour éteindre la sonnerie et regarder au passage les notifications qu'il a reçues durant la nuit. Quelques-uns de ses amis ont liké la photo qu'il avait postée le soir d'avant. Content, il se lève pour aller prendre son petit-déjeuner.
                       </p>
                       <div class="choice">
                           <span class="choice_item" onclick="process(0,0,&quot;d1_Breakfast&quot;)">
@@ -104,7 +104,7 @@
 
                   <div class="text_rec">
                       <p>
-                          En survolant les news sur sa tablette, un titre attire son regard: << Retrouvez vos origines ancestrales et vos cousins éloignés en 24 heures ! >>. L'article en question vante les avantages de stocker son ADN dans une base de donnée médicale avec apparemment que des bénéfices. Au bas de celui-ci, une pub offre une réduction de prix importante sur la procédure de stockage, la rendant très abordable. Julien hésite: l'offre est excitante mais semble trop belle pour être vraie.
+                          En survolant les news sur sa tablette, un titre attire son regard: << Retrouvez vos origines ancestrales et vos cousins éloignés en 24 heures ! >>. L'article en question vante les avantages de stocker son ADN dans une base de donnée médicale avec apparemment uniquement des bénéfices. Au bas de celui-ci, une pub offre une réduction de prix importante sur la procédure de stockage, la rendant très abordable. Julien hésite: l'offre est excitante mais semble trop belle pour être vraie.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -122,7 +122,7 @@
               <div id="d1_Metro_Terminal" class="scene">
                   <div class="text_rec">
                       <p>
-                          En chemin pour le métro qui l'aménera à l'université, Julien passe devant les nouveaux panneaux de publicité SmartPub® – récemment installés – qui à son approche changent pour afficher différentes pubs montrant les mérites du big data, du stockage d'ADN et la reconnaissance faciale. Machinalement, Julien traverse le portique de sécurité où la connection entre son visage et son abonnement de transport est faite.
+                          En chemin pour le métro qui l'aménera à l'université, Julien passe devant les nouveaux panneaux de publicité SmartPub® – récemment installés – qui à son approche changent pour afficher différentes pubs montrant les mérites du big data, du stockage d'ADN et de la reconnaissance faciale. Machinalement, Julien traverse le portique de sécurité où la connexion entre son visage et son abonnement de transport est vérifiée.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -170,7 +170,7 @@
               <div id="d1_Arriving_At_School" class="scene">
                   <div class="text_rec">
                       <p>
-                          << Un jour de plus à passer ce portique >> se lamente Julien. Il préférerait apprendre par la pratique à la place d'ingurgiter ce torrent d'information théoriques mais aujourd'hui les hautes études sont presque devenues un passage obligatoire pour pouvoir prétendre à un emploi digne. Décidé à prendre son mal en patience, il pénétre l'enceinte de l'université.
+                          << Un jour de plus à passer ce portique >> se lamente Julien. Il préférerait apprendre par la pratique à la place d'ingurgiter ce torrent d'information théorique. Néanmoins, les hautes études sont aujourd'hui presque devenues un passage obligatoire pour pouvoir prétendre à un emploi digne. Décidé à prendre son mal en patience, il pénétre l'enceinte de l'université.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -184,19 +184,18 @@
               <div id="d1_Making_A_Choice" class="scene">
                   <div class="text_rec">
                       <p>
-                          Après le premier cours du matin, Julien sort prendre l'air dans la cour. Il aperçoit à gauche cette fille assise sur le même banc qu'à son habitude, toujours seule. Il sait qu'elle s'appelle Mona et que personne n'ose s'en approcher à cause de sa mauvaise réputation. Julien check rapidement sur son smartphone: le <b>score social</b> de Mona n'est pas un mythe, il est extrêment bas – même pour lui, qui n'est pas une star non plus. Un souvenir lointain lui revient soudainement; on lui avait soufflé à son arrivée qu'elle en était là à cause de ses parents, d'anciens activistes anti-système, dont le mauvais score s'était transferé sur elle. Il se dit qu'il pourrait quand même aller lui parler une fois. <br/>
+                          Après le premier cours du matin, Julien sort prendre l'air dans la cour. Il aperçoit à gauche cette fille assise sur le même banc qu'à son habitude, toujours seule. Il sait qu'elle s'appelle Mona et que personne n'ose s'en approcher à cause de sa mauvaise réputation. Julien check rapidement sur son smartphone: le <b>score social</b> de Mona n'est pas un mythe, il est extrêmement bas – même par rapport à lui, qui n'est pas une star non plus. Un souvenir lointain lui revient soudainement; on lui avait soufflé à son arrivée qu'elle en était là à cause de ses parents, d'anciens activistes anti-système, dont le mauvais score s'était indirectement transferé sur elle. Il se dit qu'il pourrait quand même aller lui parler une fois. <br/>
                           De l'autre côté de la cour, à sa droite, sont assis les bons élèves chacun avec un <b>score social</b> élevé. D'habitude pendant les pauses, de nombreuses personnes viennent vers eux pour discuter et améliorer leur score grâce avec une récompense de << Bonne fréquentation >>. Julien aimerait aussi aller leur parler, simplement parce qu'ils ont l'air cools.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="activateWarning('Mauvaise fréquentation','Votre score social diminue.');
+                                onclick="
                                 talked_to_Mona=true;
                                 process(-1,0,&quot;d1_Choose_Mona&quot;)">
                                 <p>Aller discuter avec Mona</p>
                           </span>
                           <span class="choice_item"
-                                onclick="activateWarning('Bonne fréquentation','Votre score social augmente.', 'good');
-                                         process(1,0,&quot;d1_Choose_Guys&quot;)">
+                                onclick="process(1,0,&quot;d1_Choose_Guys&quot;)">
                                 <p>Rejoindre le groupe d'étudiants</p>
                           </span>
                       </div>
@@ -218,7 +217,8 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(-1,0,&quot;d1_In_the_classroom&quot;)">
+                                onclick="activateWarning('Mauvaise fréquentation','Votre score social diminue.');
+                                process(-1,0,&quot;d1_In_the_classroom&quot;)">
                                 <p>Continuer</p>
                           </span>
                       </div>
@@ -232,7 +232,7 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(-1,0,&quot;d1_In_the_classroom&quot;)">
+                                onclick="activateWarning('Bonne fréquentation','Votre score social augmente.', 'good');process(-1,0,&quot;d1_In_the_classroom&quot;)">
                               <p>Continuer</p>
                           </span>
                       </div>
@@ -241,10 +241,10 @@
               <div id="d1_In_the_classroom" class="scene">
                   <div class="text_rec">
                       <p>
-                          << Aujourd'hui, vous allez recevoir la note de votre dernier examen. J'appelerai votre nom pour que vous veniez chercher votre copie, en commençant par le moins bon et en gardant le meilleur pour la fin >> se réjouissait le professeur, satisfait de son arrangement.<br/>
-                          Julien n'aimait pas cette manière de faire, étant toujours appelé avant que le prof n'ait atteint la moitié des noms. S'ensuivait le walk of shame pour aller récupérer sa feuille. Cette fois, il s'en sortait avec une note suffisante. Il n'en était pas particulièrement fier mais ça lui permettait de rester légèrement au dessus de la moyenne et donc de passer son année. <br/>
-                          La danse se terminait avec la remise des notes, sous applaudissements, des cinq meilleurs examens.<br/><br/>
-                          Julien attendait patiemment la fin de la journée.
+                          << Aujourd'hui, vous allez recevoir la note de votre dernier examen. J'appelerai votre nom pour que vous veniez chercher votre copie, en commençant par le moins bon et en gardant le meilleur pour la fin >> annonce le professeur, satisfait de son arrangement.<br/>
+                          Julien n'aime pas cette manière de faire, étant toujours appelé avant que le prof n'ait atteint la moitié des noms, ce qui entraîne à chaque fois un walk of shame pour aller récupérer sa feuille. Cette fois, il s'en sort avec une note suffisante. Il n'en est pas particulièrement fier mais ça lui permet de rester légèrement au dessus de la moyenne et donc de passer son année. <br/>
+                          La danse se termine avec la remise des notes, sous applaudissements, des cinq meilleurs examens.<br/><br/>
+                          Julien continue d'écouter le cours en attendant impatiemment la fin de la journée.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -296,7 +296,7 @@
               <div id="d1_Back_Home2" class="scene">
                   <div class="text_rec">
                       <p>
-                          Les paupières s'allourdissant, Julien commence à se préparer et se glisse dans ses draps. Il passe un moment à jouer à des jeux de réflexion/stratégie puis vérifie pour la dernière fois qu'il n'a pas manqué de notification de ses amis.
+                          Plus tard, la fatigue commençant à se faire sentir, Julien se prépare pour aller se coucher et se glisse dans ses draps. Il passe un moment à jouer à des jeux de réflexion/stratégie puis vérifie pour la dernière fois qu'il n'a pas manqué de notification de ses amis.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -313,7 +313,7 @@
 
                   <div class="text_rec">
                       <p>
-                          Encore étrangement fatigué, Julien quitte son appartement.
+                          Le lendemain, encore étrangement fatigué, Julien quitte son appartement.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -388,8 +388,7 @@
               <div id="d2_Metro_Refused" class="scene">
                   <div class="text_rec">
                       <p>
-                          En colère et se sentant humilié, Julien se dirige vers une bouche de métro pour rentrer chez lui. Son esprit tourne à deux cent à l'heure, cherchant une solution à cette boucle sans fin. Arrivé devant le portique, il lève les yeux pour le contrôle de ticket. Les portes tardent à s'ouvrir. Il regarde autour de lui et l'écran en face de lui clignote d'un rouge accusateur.<br/><br/>
-                          Il vient de se faire interdire l'accès au métro.<br/><br/>
+                          En colère et se sentant humilié, Julien se dirige vers une bouche de métro pour rentrer chez lui. Son esprit tourne à deux cent à l'heure, cherchant une solution à cette boucle sans fin. Arrivé devant le portique, il lève les yeux pour le contrôle de ticket. Les portes tardent à s'ouvrir. Il regarde autour de lui et l'écran en face de lui clignote d'un rouge accusateur : Il vient de se faire interdire l'accès au métro.<br/><br/>
                           Au milieu des raisons affichées, il déchiffre: << <b>Score civile</b> de l'usager récemment en forte baisse et état colérique présent chez l'usager >>. Effondré, il se résigne à rentrer chez lui à pied.
                       </p>
                       <div class="choice">
@@ -405,7 +404,7 @@
 
                   <div class="text_rec">
                       <p>
-                          Avant d'arriver à son appartement, Julien voit de loin une silhouette maintenant familière. C'est Mona. Même à cette distance, il voit des larmes perler sur ses joues. Il ne se sent pas tellement capable de discuter avec elle pour le moment afin de ne pas la blesser à cause de sa colère, mais il voit bien que quelque chose ne va pas bien.
+                          Avant d'arriver à son appartement, Julien voit de loin une silhouette familière. C'est Mona. Même à cette distance, il voit des larmes perler sur ses joues. Il ne se sent pas tellement capable de discuter avec elle pour le moment afin de ne pas la blesser à cause de sa colère, mais il voit bien que quelque chose ne va pas bien.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -432,7 +431,7 @@
                           — Ton score social ! s'empresse Julien, c'est bien ça le problème ?<br />
                           — Oui... J'ai tout essayé, je n'arrive pas à le remonter... <br />
                           — Qu'est-ce qui se passe ? >> interroge Julien.<br /><br />
-                          Mona prit une profonde inspiration et une longue discussion s'ensuivit, durant laquelle elle exposa à Julien tout ce qui l'empêchait de s'en sortir. Notamment, elle expliqua qu'elle ne pouvait pas se faire d'amis avec un score bas sous peine de figer à jamais son score et essayer de se lier d'amitié avec d'autres gens était peine perdue car son score affreusement bas les effrayaient. <br /><br />
+                          Mona prend une profonde inspiration et une longue discussion s'ensuit, durant laquelle elle expose à Julien tout ce qui l'empêche de s'en sortir. Notamment, elle explique qu'elle ne peut pas se faire d'amis dont le score social est similaire au sien sous peine de figer son score au même niveau. D'un autre coté, essayer de se lier d'amitié avec d'autres gens est peine perdue car son score affreusement bas les effraient bien trop. <br /><br />
                           À la fin des explications Julien acquiesce, abasourdi. Il vient d'entrer dans le monde de Mona qui, quelques heures plus tôt, lui semblait impensable. Après cette révélation et l'épisode de l'assurance, Julien commence à sentir une gêne oppressante grandir au fond de lui.<br /><br />
                           Aujourd'hui, le système qui lui semblait si bien fonctionner s'écroulait pour lentement révéler une face injuste et arbitraire.
                       </p>
@@ -480,7 +479,7 @@
                       <p>
                           Le lendemain, Julien arrive à l'université et trouve quelques joueurs de l'équipe de basket sur un banc. Ceux-ci, qui l'avaient vu la veille sur le terrain avant qu'il ne parte, lui demandent s'il est prêt pour commencer les entraînements. Il leur répond qu'il n'a pas pu faire d'assurance pour des raisons qu'il trouve stupides. Sa réponse est accueillie avec quelques haussements de sourcil et un air dédaigneux avant que les joueurs se tournent les uns vers les autres et changent de sujet, ayant visiblement perdu tout intérêt envers leur interlocuteur. Un peu dépité, Julien comprend qu'on met la faute sur lui pour ne pas avoir été capable de prendre une simple assurance. <br/><br/>
 
-                          Il est au pied des escaliers de la cour lorsqu'une des secrétaires descend dans la cour, s'approche de lui et transmet: << Le directeur veut vous voir immédiatement. >>
+                          Il se retrouve seul, au pied des escaliers de la cour, lorsqu'une des secrétaires descend dans la cour, s'approche de lui et transmet: << Le directeur veut vous voir immédiatement. >>
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -504,7 +503,7 @@
                           << Pourquoi est-ce qu'il faut que je doive tout faire parfaitement ?! Ces jeux, j'y joue pour me détendre et maintenant j'apprends qu'on me juge aussi dessus ?! Vous ne savez rien de moi, de ce que j'ai enduré ces derniers jours !<br/>
                           — Nous savons plus que nécessaire, Monsieur, répond le directeur, impassible. Je vais maintenant vous demander de partir avant de devoir appeler la sécurité. Et votre colère... vous n'améliorez pas votre cas.<br/><br/>
 
-                          Julien, dans un éclair de lucidité, sort du bureau avant que ça dégénère. Un peu perdu, il décide de rentrer chez lui pour le reste de la journée. Son smartphone vibre.
+                          Julien, dans un éclair de lucidité, sort du bureau avant que ça ne dégénère. Un peu perdu, il décide de rentrer chez lui pour le reste de la journée. Son smartphone vibre.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -564,7 +563,7 @@
                           Les jours suivants, ils continuent de se voir et finissent pas sortir ensemble, Julien ne pense plus trop à ses problèmes de scores, il est heureux avec elle.<br /> <br />
                           Un jour, alors qu'ils se promènent en ville, ils tombent sur un groupe dont la réputation sociale est élevée. Ils se montrent particulièrement méprisant envers Mona en la pointant du doigt et en disant à Julien "C'est pour ÇA que tu ne viens pas à nos fêtes !". Julien préfère les ignorer, il a déjà eu assez de problème à cause de ses accès de colère. Il tente par la suite de réconforter Mona qui a très mal pris la remarque qui lui a été lancée. <br /> <br />
                           Quelques jours plus tard, alors que Julien rentre tranquillement des cours, il reçoit un message de Mona. Le message indique simplement "Je suis désolée...". Il ne comprend pas du tout le sens du message et l'appelle immédiatement, sans succès. Julien imagine le pire et décide de se rendre immédiatement à son appartement. Arrivé sur place, il entre dans l'appartement grâce au double des clés que Mona lui a donné, et la trouve allongé sur son lit, le regard figé, deux boîtes de médicaments vides traînant au pied du lit. Il se précipite vers elle pour tenter de la réveiller, voyant qu'il n'y arrive pas, il appelle une ambulance. <br /> <br />
-                          En attendant l'ambulance, Julien vérifie le poul de Mona. Il est très faible, mais il arrive à le détecter. Malheureusement, l'ambulance tarde à arriver. Paniqué, Julien rappelle alors les urgences pour leur demander pourquoi cela met si long ! Une personne lui répond qu'une ambulance vient seulement de partir à l'instant. Toutes les ambulances se sont d'abord occupée de personnes dont le score social était plus élevé. <br /> <br />
+                          En attendant l'ambulance, Julien vérifie le poul de Mona. Il est très faible, mais il arrive à le détecter. Malheureusement, l'ambulance tarde à arriver. Paniqué, Julien rappelle alors les urgences pour leur demander pourquoi cela met si long ! Une personne lui répond qu'une ambulance vient seulement de partir à l'instant. Toutes les ambulances se sont d'abord occupée de personnes dont le score civil était plus élevé. <br /> <br />
                           Lorsque l'ambulance arrive enfin, il est trop tard. Le coeur de Mona s'est arrêté, et les ambulanciers ne parviennent pas à la réanimer. Impuissant, Julien regarde les ambulanciers mettre Mona sur une civière, la recouvrant d'un drap blanc, avant de l'emmener dans l'ambulance.
                       </p>
 
@@ -641,7 +640,7 @@
            <!-- Warning that twinkles -->
 
           <div id="warning">
-              <span id="warning_text_head"></span>
+              <span id="warning_text_head">SMS reçu :</span>
               <span id="warning_text_what"></span>
               <span id="warning_text_then"></span>
           </div>
