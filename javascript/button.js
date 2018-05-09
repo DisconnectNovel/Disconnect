@@ -125,6 +125,7 @@ function process(social_increment, civil_increment, next_scene) {
 }
 
 function launch_outro(name) {
+    $("#minimize").css("display", "none")
     $("#fading img").removeClass("opaque");
     $("#scenes div").removeClass("opaque");
     if (name == "rebellion") {
