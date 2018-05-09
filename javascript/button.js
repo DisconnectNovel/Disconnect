@@ -124,6 +124,39 @@ function process(social_increment, civil_increment, next_scene) {
     setMinimizer()
 }
 
+function launch_outro(name) {
+    $("#fading img").removeClass("opaque");
+    $("#scenes div").removeClass("opaque");
+    if (name == "rebellion") {
+        setTimeout(function(){
+            $("#rebellion_outro").css("display", "inline");
+        }, 1000);
+    }
+    let body_width = $("body").width()
+    let body_height = $("body").height()
+    let video_width = 1920
+    let video_height = 1080
+    if (video_width / video_height > body_width / body_height) {
+        // Si la video est plus large que la fenêtre, avec les même proportions
+        let final_video_width = body_width
+        let final_video_height = parseInt(final_video_width * (video_height/video_width))
+        $(".video").css("width", final_video_width)
+        $(".video").css("height", final_video_height)
+        $("#rebellion_outro").css("left", 0)
+        let top = parseInt(body_height/2 - final_video_height/2)
+        $("#rebellion_outro").css("top", top)
+    }
+    else {
+        let final_video_height = body_height
+        let final_video_width = parseInt(final_video_height * (video_width/video_height))
+        $(".video").css("width", final_video_width)
+        $(".video").css("height", final_video_height)
+        $("#rebellion_outro").css("top", 0)
+        let left = parseInt(body_width/2 - final_video_width/2)
+        $("#rebellion_outro").css("left", left)
+    }
+}
+
 function updateText_d2_At_school() {
     let txt = "";
     if (talked_to_Mona) {
@@ -139,7 +172,7 @@ function updateText_d2_At_school() {
 function updateText_d2_At_health_insurance() {
 
     let text = "";
-    text += "Julien arrive haletant dans la compagnie d'assurance la plus proche. Arrivé à l'accueil, il demande des renseignements pour contracter une assurance santé et on le redirige vers un vieil agent à l'air sec qui prendra en charge son dossier. Après s'être assis et avoir prouvé son identité, Julien observe l'agent pianoter sur son clavier avant de se retourner vers lui. D'un ton monotone celui-ci déclare que l'assurance refuse son dossier et en énumère les raisons: <br/>";
+    text += "Julien arrive haletant dans la compagnie d'assurance la plus proche. Arrivé à l'accueil, il demande des renseignements pour contracter une assurance santé et on le redirige vers une femme qui prendra en charge son dossier. Après s'être assis et avoir prouvé son identité, Julien observe l'agent pianoter sur son clavier avant de se retourner vers lui. D'un ton monotone celle-ci déclare que l'assurance refuse son dossier et en énumère les raisons: <br/>";
 
     if (dna_stored) {
         text += "  - L'ADN que Julien avait envoyé précédemment indique des probabilités de maladie supérieures à la moyenne.<br />";
@@ -162,7 +195,7 @@ function updateText_d2_At_health_insurance() {
         text += "  - Les données récoltées à partir du GPS du téléphone de Julien indiquent qu'il se déplace peu, et donc qu'il fait très peu de sport.<br />";
     }
 
-    text += "<br />L'agent avertit Julien que s'il souhaite vraiment obtenir une assurance santé, le prix sera nettement plus élevé pour prendre en compte les facteurs de risque. Julien, choqué, se rend compte il n'est pas capable de payer une telle somme et qu'il doit abandonner l'idée de faire du basket. Une fois remis du choc, il sent une colère bouillonnante monter en lui: << Si je veux me faire assurer, c'est justement pour pour pouvoir faire du sport et par conséquent diminuer mes risques, pourquoi vous ne me laissez pas le faire ! >> fulmine-t-il à l'agent en tapant du poing sur la table. La sécurité est appelée mais Julien sort en coup de vent qu'elle n'ai eu le temps d'arriver.<br /><br />Une caméra à l'intérieur de la pièce a enregistré la scène.";
+    text += "<br />L'agent avertit Julien que s'il souhaite vraiment obtenir une assurance santé, le prix sera nettement plus élevé pour prendre en compte les facteurs de risque. Julien, choqué, se rend compte il n'est pas capable de payer une telle somme et qu'il doit abandonner l'idée de faire du basket. Une fois remis du choc, il sent une colère bouillonnante monter en lui: << Si je veux me faire assurer, c'est justement pour pour pouvoir faire du sport et par conséquent diminuer mes risques, pourquoi vous ne me laissez pas le faire ! >> fulmine-t-il en tapant du poing sur la table. La sécurité est appelée mais Julien sort en coup de vent qu'elle n'ai eu le temps d'arriver.<br /><br />Une caméra à l'intérieur de la pièce a enregistré la scène.";
     document.getElementById("d2_At_health_insurance_text").innerHTML = text;
 }
 

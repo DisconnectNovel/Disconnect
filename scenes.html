@@ -13,7 +13,7 @@
   <body>
       <script>
         window.onload = function() {
-            current_scene = "d1_Waking_Up"
+            current_scene = "Ending_Rebellion_3"
             $("#fading img").removeClass("opaque");
             $("#scenes div").removeClass("opaque");
             $("#" + current_scene).addClass("opaque");
@@ -466,7 +466,6 @@
 
                   <div class="text_rec">
                       <p>
-
                           Julien arrive dans le bureau du directeur. Celui-ci lui fait signe de s'asseoir et prend un air austère: <br/>
                           << Monsieur, nous avons eu vent d'un élève dernièrement à la dérive. Cet élève, c'est vous. Après investigation de votre dossier, nous nous sommes aperçu que vous aviez des notes à peine suffisantes et aucun signe de redressement. Un élément a fait pencher la balance: les jeux de réflexion auxquels vous jouez montrent que vous avez un niveau pré-universitaire, ce qui indique que vous n'avez pas acquis les bases enseignées ici. C'est pourquoi nous avons décidé d'agir, pour votre bien. Vous allez refaire cette année académique, afin de vous perfectionner et obtenir des notes plus dignes.>> <br/><br/>
 
@@ -570,6 +569,22 @@
 
               <div id="Ending_Rebellion_3" class="scene">
                   <!-- <p>Image finale pour la fin 'rebellion'</p> -->
+                  <div class="text_rec">
+
+                      <div class="choice">
+                          <span class="choice_item"
+                                onclick="launch_outro('rebellion')">
+                                <p>Continuer</p>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+
+              <div id="rebellion_outro" class="outro">
+                  <video autoplay="autoplay" class="video">
+                      <source src="videos/outro_rebellion.mp4" type="video/mp4">
+                      Your browser does not support the video tag.
+                  </video>
               </div>
 
               <!-- Conformism -->
