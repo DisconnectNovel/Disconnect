@@ -128,12 +128,14 @@ function launch_outro(name) {
     $("#minimize").css("display", "none")
     $("#fading img").removeClass("opaque");
     $("#scenes div").removeClass("opaque");
-    if (name == "rebellion") {
-        setTimeout(function(){
-            $("#rebellion_outro").css("display", "inline");
-            document.getElementById("rebellion_outro_video").play();
-        }, 1000);
-    }
+    setTimeout(function(){
+        $("#" + name).css("display", "inline");
+        document.getElementById(name + "_video").play();
+    }, 1000);
+    resize_video(name)
+}
+
+function resize_video(name) {
     let body_width = $("body").width()
     let body_height = $("body").height()
     let video_width = 1920
@@ -144,18 +146,18 @@ function launch_outro(name) {
         let final_video_height = parseInt(final_video_width * (video_height/video_width))
         $(".video").css("width", final_video_width)
         $(".video").css("height", final_video_height)
-        $("#rebellion_outro").css("left", 0)
+        $("#" + name).css("left", 0)
         let top = parseInt(body_height/2 - final_video_height/2)
-        $("#rebellion_outro").css("top", top)
+        $("#" + name).css("top", top)
     }
     else {
         let final_video_height = body_height
         let final_video_width = parseInt(final_video_height * (video_width/video_height))
         $(".video").css("width", final_video_width)
         $(".video").css("height", final_video_height)
-        $("#rebellion_outro").css("top", 0)
+        $("#" + name).css("top", 0)
         let left = parseInt(body_width/2 - final_video_width/2)
-        $("#rebellion_outro").css("left", left)
+        $("#" + name).css("left", left)
     }
 }
 

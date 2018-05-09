@@ -6,15 +6,23 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!--<link rel="stylesheet" type="text/css" href="css/image.css">
     <link rel="stylesheet" type="text/css" href="css/textBox.css">-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="javascript/button.js"></script>
   </head>
   <body>
+      <script>
+          window.onload = function() {
+              resize_video("intro")
+          }
+      </script>
 
       <div class="flex-container">
-          <video width="700" height="1000" loop autoplay="autoplay">
-              <source src="videos/kiwi.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
+          <div id="intro">
+              <video id="intro_video" class="video" autoplay="autoplay">
+                  <source src="videos/intro_small.mp4" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>
+          </div>
 
           <div class="start_text">
               <span

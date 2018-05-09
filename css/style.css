@@ -226,7 +226,7 @@ body {
 
 /* Outro video */
 
-#rebellion_outro{
+.outro{
     position: fixed;
     left: 0px;
     top: 0px;
