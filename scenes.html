@@ -170,7 +170,7 @@
               <div id="d1_Arriving_At_School" class="scene">
                   <div class="text_rec">
                       <p>
-                          << Un jour de plus à passer ce portique >> se lamente Julien. Lui préférerais apprendre par la partique mais aujourd'hui les hautes études sont presque devenues un passage obligatoire pour pouvoir prétendre à un emploi digne. Bien décidé à prendre son mal en patience, il pénétre l'enceinte de l'université.
+                          << Un jour de plus à passer ce portique >> se lamente Julien. Il préférerait apprendre par la pratique à la place d'ingurgiter ce torrent d'information théoriques mais aujourd'hui les hautes études sont presque devenues un passage obligatoire pour pouvoir prétendre à un emploi digne. Décidé à prendre son mal en patience, il pénétre l'enceinte de l'université.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -318,7 +318,7 @@
                       </p>
                       <div class="choice">
                           <span class="choice_item"
-                                onclick="process(0,0,&quot;d2_Arriving_At_School&quot;)">
+                                onclick="updateText_d2_At_school();process(0,0,&quot;d2_Arriving_At_School&quot;)">
                               <p>Continuer</p>
                           </span>
                       </div>
@@ -389,7 +389,7 @@
               <div id="d2_Metro_Refused" class="scene">
                   <div class="text_rec">
                       <p>
-                          En colère et se sentant humilié, Julien se dirige vers une bouche de métro pour rentrer chez lui. Son esprit tournant à deux cent à l'heure, cherchant une solution à cette boucle sans fin. Arrivé devant le portique, il lève les yeux pour le contrôle de ticket. Les portes tardent à s'ouvrir. Il regarde autour de lui et l'écran en face de lui clignote d'un rouge accusateur.<br/><br/>
+                          En colère et se sentant humilié, Julien se dirige vers une bouche de métro pour rentrer chez lui. Son esprit tourne à deux cent à l'heure, cherchant une solution à cette boucle sans fin. Arrivé devant le portique, il lève les yeux pour le contrôle de ticket. Les portes tardent à s'ouvrir. Il regarde autour de lui et l'écran en face de lui clignote d'un rouge accusateur.<br/><br/>
                           Il vient de se faire interdire l'accès au métro.<br/><br/>
                           Au milieu des raisons affichées, il déchiffre: << <b>Score civile</b> de l'usager récemment en forte baisse et état colérique présent chez l'usager >>. Effondré, il se résigne à rentrer chez lui à pied.
                       </p>
@@ -406,7 +406,7 @@
 
                   <div class="text_rec">
                       <p>
-                          Avant d'arriver à son appartement, Julien voit de loin une silhouette maintenant familière. C'est Mona. Même à cette distance, il voit des larmes perler sur ses joues. Il ne se sent pas tellement capable de discuter avec elle pour le moment pour ne pas la blesser à cause de sa colère, mais il voit bien que quelque chose ne va pas bien.
+                          Avant d'arriver à son appartement, Julien voit de loin une silhouette maintenant familière. C'est Mona. Même à cette distance, il voit des larmes perler sur ses joues. Il ne se sent pas tellement capable de discuter avec elle pour le moment afin de ne pas la blesser à cause de sa colère, mais il voit bien que quelque chose ne va pas bien.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -433,9 +433,9 @@
                           — Ton score social ! s'empresse Julien, c'est bien ça le problème ?<br />
                           — Oui... J'ai tout essayé, je n'arrive pas à le remonter... <br />
                           — Qu'est-ce qui se passe ? >> interroge Julien.<br /><br />
-                          Mona prit une profonde inspiration et une longue discussion s'ensuivit, durant laquelle elle exposa à Julien tout ce qui l'empêchait de s'en sortir. Notamment, elle expliqua qu'elle ne pouvait pas se faire d'amis avec un score bas sous peine de figer son score et que c'était peine perdue d'essayer de se lier d'amitié avec d'autres gens car son score affreusement bas les effrayaient. <br /><br />
+                          Mona prit une profonde inspiration et une longue discussion s'ensuivit, durant laquelle elle exposa à Julien tout ce qui l'empêchait de s'en sortir. Notamment, elle expliqua qu'elle ne pouvait pas se faire d'amis avec un score bas sous peine de figer à jamais son score et essayer de se lier d'amitié avec d'autres gens était peine perdue car son score affreusement bas les effrayaient. <br /><br />
                           À la fin des explications Julien acquiesce, abasourdi. Il vient d'entrer dans le monde de Mona qui, quelques heures plus tôt, lui semblait impensable. Après cette révélation et l'épisode de l'assurance, Julien commence à sentir une gêne oppressante grandir au fond de lui.<br /><br />
-                          Aujourd'hui, le système qui lui semblait si bien fonctionner se révélait lentement comme injuste et arbitraire.
+                          Aujourd'hui, le système qui lui semblait si bien fonctionner s'écroulait pour lentement révéler une face injuste et arbitraire.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -479,8 +479,9 @@
 
                   <div class="text_rec">
                       <p>
-                          <b>TODO</b><br/><br/>
-                          Le jour suivant, Julien se rend à l'université, et ses amis lui reprochent de ne pas faire de basket avec eux. Julien leur rétorque que ce n'est pas de sa faute, mais cela n'a pas l'air de vraiment les intéresser, ils retournent rapidement à leur jeu, et Julien se retrouve seul. Plus tard, il est appelé dans le bureau du directeur.
+                          Le lendemain, Julien arrive à l'université et trouve quelques joueurs de l'équipe de basket sur un banc. Ceux-ci, qui l'avaient vu la veille sur le terrain avant qu'il ne parte, lui demandent s'il est prêt pour commencer les entraînements. Il leur répond qu'il n'a pas pu faire d'assurance pour des raisons qu'il trouve stupides. Sa réponse est accueillie avec quelques haussements de sourcil et un air dédaigneux avant que les joueurs se tournent les uns vers les autres et changent de sujet, ayant visiblement perdu tout intérêt envers leur interlocuteur. Un peu dépité, Julien comprend qu'on met la faute sur lui pour ne pas avoir été capable de prendre une simple assurance. <br/><br/>
+
+                          Il est au pied des escaliers de la cour lorsqu'une des secrétaires descend dans la cour, s'approche de lui et transmet: << Le directeur veut vous voir immédiatement. >>
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -496,8 +497,15 @@
 
                   <div class="text_rec">
                       <p>
-                          <b>TODO</b><br/><br/>
-                          Le directeur lui explique que Julien est considéré comme en échec et va devoir refaire son année. Julien est abasourdi par cette nouvelle, ses notes ne sont effectivement pas excellentes, mais elles sont suffisantes pour lui faire passer son année. Le directeur lui explique que ce n'est pas seulement une question de notes. L'évaluation des étudiants est plus large et tient compte également d'autres éléments, comme l'activité en ligne des étudiants sur des jeux de réflexion et de stratégie. Comme Julien n'est pas très bon à ces jeux, cela a contribuer à descendre sa moyenne. Julien se met alors en colère, et commence à crier sur le directeur. Une fois encore, une caméra de surveillance filme toute la scène.
+
+                          Julien arrive dans le bureau du directeur. Celui-ci lui fait signe de s'asseoir et prend un air austère: <br/>
+                          << Monsieur, nous avons eu vent d'un élève dernièrement à la dérive. Cet élève, c'est vous. Après investigation de votre dossier, nous nous sommes aperçu que vous aviez des notes à peine suffisantes et aucun signe de redressement. Un élément a fait pencher la balance: les jeux de réflexion auxquels vous jouez montrent que vous avez un niveau pré-universitaire, ce qui indique que vous n'avez pas acquis les bases enseignées ici. C'est pourquoi nous avons décidé d'agir, pour votre bien. Vous allez refaire cette année académique, afin de vous perfectionner et obtenir des notes plus dignes.>> <br/><br/>
+
+                          Julien ne s'attendait pas à une telle nouvelle. Il sent la colère lui monter à la tête. Si ça avait été un autre temps, il serait parti du bureau, lèvres pincées, avec un semblant de composition mais aujourd'hui... Avec tout ce qu'il avait subit ces derniers jours on osait encore lui annoncer ça. Il serre les poings et éclate. <br/>
+                          << Pourquoi est-ce qu'il faut que je doive tout faire parfaitement ?! Ces jeux, j'y joue pour me détendre et maintenant j'apprends qu'on me juge aussi dessus ?! Vous ne savez rien de moi, de ce que j'ai enduré ces derniers jours !<br/>
+                          — Nous savons plus que nécessaire, Monsieur, répond le directeur, impassible. Je vais maintenant vous demander de partir avant de devoir appeler la sécurité. Et votre colère... vous n'améliorez pas votre cas.<br/><br/>
+
+                          Julien, dans un éclair de lucidité, sort du bureau avant que ça dégénère. Un peu perdu, il décide de rentrer chez lui pour le reste de la journée. Son smartphone vibre.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
@@ -516,13 +524,12 @@
               <div id="d3_Before_Event_with_Mona" class="scene">
                   <div class="text_rec">
                       <p>
-                          <b>TODO</b><br/><br/>
-                          Julien retourne chez lui, il reçoit un message d'un ami qui organise une fête le soir-même. Julien est très tenté par cette soirée, ne serait-ce que pour remonter son score social qui commence à être dangereusement bas. Mais en même temps il a déjà prévu d'aller boire un verre avec Mona. Impossible de faire les deux, Mona ne sera jamais invitée à la soirée. Il doit choisir.
+                          Dans l'après-midi, une invitation d'un ami arrive sur son smartphone. Il organise une fête le soir même et demande à Julien s'il aimerait venir. << Au moins ça pourrait faire monter mon <b>score social</b> >>, ironise amèrement ce dernier. Mona ne serait de toute façon pas invitée à ce genre d'événement; Julien hésite donc à l'appeler pour qu'ils sortent les deux à la place.
                       </p>
                       <div class="choice">
                           <span class="choice_item"
                                 onclick="process(0,0,&quot;Ending_Rebellion_1&quot;)">
-                                <p>Aller voir Mona comme prévu</p>
+                                <p>Sortir avec Mona</p>
                           </span>
                           <span class="choice_item"
                                 onclick="process(0,0,&quot;Ending_Conformist_1&quot;)">
@@ -536,8 +543,7 @@
 
                   <div class="text_rec">
                       <p>
-                          <b>TODO</b><br/><br/>
-                          Julien retourne chez lui, il reçoit un message d'un ami qui organise une fête le soir-même. Comme Julien n'a rien prévu durant la soirée, il accepte l'invitation. Cela sera une bonne occasion d'augmenter son score social. Il en profite pour poster sur les réseaux sociaux qu'il va venir à la soirée.
+                          Dans l'après-midi, une invitation d'un ami arrive sur son smartphone. Il organise une fête le soir même et demande à Julien s'il aimerait venir. << Au moins ça pourrait faire monter mon <b>score social</b> >>, ironise amèrement ce dernier.
                       </p>
                       <div class="choice">
                           <span class="choice_item"

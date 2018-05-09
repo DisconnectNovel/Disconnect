@@ -169,9 +169,9 @@ function updateText_d2_At_health_insurance() {
 }
 
 function updateText_d2_At_home() {
-    let text = "<b>TODO JS</b><br/><br/> Le soir, comme à son habitude, Julien joue à des jeux de réflexion sur son smartphone. ";
+    let text = "Le soir, après s'être calmé un peu, Julien lance un des jeux de réflexion sur smartphone qu'il apprécie. Il n'est pas forcément très bon mais << Au moins je peux faire des erreurs sans que ça me retombe dessus >> aime-t-il dire en souriant. <br/>";
     if (stopped_when_Mona_sad) {
-        text+= "Il reçoit alors un message d'un ami de l'université qui l'a vu avec Mona et qui lui demande pourquoi il perd son temps avec une fille comme ça. Julien est assez surpris, pour lui ça ne regarde personne de savoir avec qui il parle.";
+        text+= "Il reçoit alors un message bizarre d'un ami de l'université qui l'aurait vu en companie de Mona. Celui-ci lui demande pourquoi il perd son temps avec une fille comme ça et l'avertit qu'il risque de gâcher sa vie comme ça. Julien est surpris que des gens s'intéressent à ce point à qui il parle.";
     }
     document.getElementById("d2_At_home_text").innerHTML = text
 }
