@@ -238,3 +238,7 @@ body {
 .video {
 
 }
+
+#intro {
+    display: none;
+}
