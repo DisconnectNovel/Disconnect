@@ -164,10 +164,10 @@ function resize_video(name) {
 function updateText_d2_At_school() {
     let txt = "";
     if (talked_to_Mona) {
-        txt = "De retour à l'université le lendemain, Julien croise Mona sur son banc. Celle-ci, contente de le voir, le salue chaleureusement et lui fait signe d'approcher.";
+        txt = "De retour à l'université le lendemain, Aaron croise Mona sur son banc. Celle-ci, contente de le voir, le salue chaleureusement et lui fait signe d'approcher.";
     }
     else {
-        txt = "De retour à l'université le lendemain, Julien voit Mona de l'autre côté de la cour. Il croise son regard, qui semble vidé d'émotion. Un poster flamboyante présentant l'équipe de basket détourne son attention. << Recherche de nouvelles recrues talentueuses ! >> tonnait l'affiche. Julien sent une bouffée d'excitation s'emparer de lui. Il pensait justement rejoindre l'équipe de basket, en ayant fait plus jeune à un niveau relativement élevé et appréciant profondément ce sport. L'affiche précise de venir à l'un des entraînements de midi pour faire connaissance et participer à l'échauffement.<br /><br />";
+        txt = "De retour à l'université le lendemain, Aaron voit Mona de l'autre côté de la cour. Il croise son regard, qui semble vidé d'émotion. Un poster flamboyante présentant l'équipe de basket détourne son attention. << Recherche de nouvelles recrues talentueuses ! >> tonnait l'affiche. Aaron sent une bouffée d'excitation s'emparer de lui. Il pensait justement rejoindre l'équipe de basket, en ayant fait plus jeune à un niveau relativement élevé et appréciant profondément ce sport. L'affiche précise de venir à l'un des entraînements de midi pour faire connaissance et participer à l'échauffement.<br /><br />";
 
     }
     document.getElementById("d2_At_school_text").innerHTML = txt;
@@ -176,37 +176,37 @@ function updateText_d2_At_school() {
 function updateText_d2_At_health_insurance() {
 
     let text = "";
-    text += "Julien arrive haletant dans la compagnie d'assurance la plus proche. Arrivé à l'accueil, il demande des renseignements pour contracter une assurance santé et on le redirige vers une femme qui prendra en charge son dossier. Après s'être assis et avoir prouvé son identité, Julien observe l'agent pianoter sur son clavier avant de se retourner vers lui. D'un ton monotone celle-ci déclare que l'assurance refuse son dossier et en énumère les raisons: <br/>";
+    text += "Aaron arrive haletant dans la compagnie d'assurance la plus proche. Arrivé à l'accueil, il demande des renseignements pour contracter une assurance santé et on le redirige vers une femme qui prendra en charge son dossier. Après s'être assis et avoir prouvé son identité, Aaron observe l'agent pianoter sur son clavier avant de se retourner vers lui. D'un ton monotone celle-ci déclare que l'assurance refuse son dossier et en énumère les raisons: <br/>";
 
     if (dna_stored) {
-        text += "  - L'ADN que Julien avait envoyé précédemment indique des probabilités de maladie supérieures à la moyenne.<br />";
+        text += "  - L'ADN que Aaron avait envoyé précédemment indique des probabilités de maladie supérieures à la moyenne.<br />";
     }
     else {
-        text += "  - Aucune donnée sur l'ADN de Julien, mais l'ADN des parents indique des probabilités de maladie supérieures à la moyenne, Julien est donc à risque.<br />";
+        text += "  - Aucune donnée sur l'ADN de Aaron, mais l'ADN des parents indique des probabilités de maladie supérieures à la moyenne, Aaron est donc à risque.<br />";
     }
 
     if (fidelity_card) {
-        text += "  - Les données récoltées à partir du compte client que Julien avait créé pour obtenir sa carte de fidélité indiquent qu'il a acheté des aliments qui sont mauvais pour la santé. <br />";
+        text += "  - Les données récoltées à partir du compte client que Aaron avait créé pour obtenir sa carte de fidélité indiquent qu'il a acheté des aliments qui sont mauvais pour la santé. <br />";
     }
     else {
-        text += "  - Aucune donnée sur les aliments que Julien achète.<br />";
+        text += "  - Aucune donnée sur les aliments que Aaron achète.<br />";
     }
 
     if (ran) {
-        text += "  - Les données récoltées à partir de l'application que Julien avait utilisé pour aller courir indiquent que ses performances sont assez faibles. Le rythme cardiaque était également particulièrement élevé lors de la course, indicateur de mauvaise santé physique.<br />";
+        text += "  - Les données récoltées à partir de l'application que Aaron avait utilisé pour aller courir indiquent que ses performances sont assez faibles. Le rythme cardiaque était également particulièrement élevé lors de la course, indicateur de mauvaise santé physique.<br />";
     }
     else {
-        text += "  - Les données récoltées à partir du GPS du téléphone de Julien indiquent qu'il se déplace peu, et donc qu'il fait très peu de sport.<br />";
+        text += "  - Les données récoltées à partir du GPS du téléphone de Aaron indiquent qu'il se déplace peu, et donc qu'il fait très peu de sport.<br />";
     }
 
-    text += "<br />L'agent avertit Julien que s'il souhaite vraiment obtenir une assurance santé, le prix sera nettement plus élevé pour prendre en compte les facteurs de risque. Julien, choqué, se rend compte il n'est pas capable de payer une telle somme et qu'il doit abandonner l'idée de faire du basket. Une fois remis du choc, il sent une colère bouillonnante monter en lui: << Si je veux me faire assurer, c'est justement pour pour pouvoir faire du sport et par conséquent diminuer mes risques, pourquoi vous ne me laissez pas le faire ! >> fulmine-t-il en tapant du poing sur la table. La sécurité est appelée mais Julien sort en coup de vent qu'elle n'ai eu le temps d'arriver.<br /><br />Une caméra à l'intérieur de la pièce a enregistré la scène.";
+    text += "<br />L'agent avertit Aaron que s'il souhaite vraiment obtenir une assurance santé, le prix sera nettement plus élevé pour prendre en compte les facteurs de risque. Aaron, choqué, se rend compte il n'est pas capable de payer une telle somme et qu'il doit abandonner l'idée de faire du basket. Une fois remis du choc, il sent une colère bouillonnante monter en lui: << Si je veux me faire assurer, c'est justement pour pour pouvoir faire du sport et par conséquent diminuer mes risques, pourquoi vous ne me laissez pas le faire ! >> fulmine-t-il en tapant du poing sur la table. La sécurité est appelée mais Aaron sort en coup de vent qu'elle n'ai eu le temps d'arriver.<br /><br />Une caméra à l'intérieur de la pièce a enregistré la scène.";
     document.getElementById("d2_At_health_insurance_text").innerHTML = text;
 }
 
 function updateText_d2_At_home() {
-    let text = "Le soir, après s'être calmé un peu, Julien lance un des jeux de réflexion sur smartphone qu'il apprécie. Il n'est pas forcément très bon mais << Au moins je peux faire des erreurs sans que ça me retombe dessus >> aime-t-il dire en souriant. <br/>";
+    let text = "Le soir, après s'être calmé un peu, Aaron lance un des jeux de réflexion sur smartphone qu'il apprécie. Il n'est pas forcément très bon mais << Au moins je peux faire des erreurs sans que ça me retombe dessus >> aime-t-il dire en souriant. <br/>";
     if (stopped_when_Mona_sad) {
-        text+= "Il reçoit alors un message bizarre d'un ami de l'université qui l'aurait vu en companie de Mona. Celui-ci lui demande pourquoi il perd son temps avec une fille comme ça et l'avertit qu'il risque de gâcher sa vie s'il continue à la fréquenter. Julien est surpris que des gens s'intéressent à ce point aux gens à qui il parle.";
+        text+= "Il reçoit alors un message bizarre d'un ami de l'université qui l'aurait vu en companie de Mona. Celui-ci lui demande pourquoi il perd son temps avec une fille comme ça et l'avertit qu'il risque de gâcher sa vie s'il continue à la fréquenter. Aaron est surpris que des gens s'intéressent à ce point aux gens à qui il parle.";
     }
     document.getElementById("d2_At_home_text").innerHTML = text
 }
