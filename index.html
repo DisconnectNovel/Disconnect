@@ -26,14 +26,28 @@
               </video>
           </div>
 
+          <div id="credits" class="credit_text">
+              <span>
+                  <p>Une nouvelle de <a href="https://github.com/HugoSalt">Hugo</a> | <a href="https://github.com/Karexar" >Mike</a> | <a href="https://github.com/RomainGehrig">Romain</a> | <a href="https://github.com/Akynna">Tim</a></p>
+              </span>
+          </div>
           <div class="start_text">
               <span
-                    onclick="location.href='scenes.html'">
-                    <p>Commencer</p>
+                  onclick="location.href='scenes.html'">
+                  <p>Commencer</p>
               </span>
           </div>
       </div>
-
-
+      <script>
+       let vid = document.getElementById("intro_video");
+       vid.onplay = function() {
+           setTimeout(function() {
+               $("#credits").fadeIn(3000, function(){});
+           }, 15000);
+           setTimeout(function() {
+               $("#credits").fadeOut(3000, function(){});
+           }, 15000 + 30000);
+       }
+      </script>
   </body>
 </html>
